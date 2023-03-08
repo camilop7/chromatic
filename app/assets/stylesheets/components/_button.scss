@@ -1,0 +1,35 @@
+.interested_button {
+  margin: 0 auto;
+  width: 200px;
+  height: 56px;
+  left: 97px;
+  top: 1181px;
+  background: #B41BD0;
+  border-style: solid;
+  border-color: white;
+  border-radius: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.interested_button:active {
+  margin: 0 auto;
+  width: 200px;
+  height: 56px;
+  left: 97px;
+  top: 1181px;
+  background: white;
+  border-style: solid;
+  border-color: white;
+  border-radius: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: #B41BD0
+  }
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
