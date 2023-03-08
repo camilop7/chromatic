@@ -1,10 +1,43 @@
-<h1>THIS WEEK</h1>
+<div class="container-swipping">
+  <h1 class="title-events">THIS WEEK</h1>
 
-<h1>YOUR ARTISTS</h1>
+  <!-- Slider main container -->
+  <div data-controller="swiper" class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><%= image_tag "1975INDEX1.jpg", alt: "slide1" %></div>
+      <div class="swiper-slide"><%= image_tag "strokesINDEX.jpg", alt: "slide2" %></div>
+      <div class="swiper-slide"><%= image_tag "JojiINDEX.jpg", alt: "slide3" %></div>
+      <div class="swiper-slide"><%= image_tag "radiohead.jpg", alt: "slide4" %></div>
+      <div class="swiper-slide"><%= image_tag "radiohead.jpg", alt: "slide5" %></div>
+    </div>
+  </div>
+</div>
 
-<h1>GENRE</h1>
+<div class="container-genre">
+  <div class="card-genre">
+    <h1 class="title-genre">GENRE</h1>
+      <div class= "avatar-index-first-row">
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+      </div>
+      <div class="avatar-index-second-row">
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>EVENTS</h1>
+
+
+
+<h1 class="title-events-index">EVENTS</h1>
 
 
 <% @events.each do |event| %>

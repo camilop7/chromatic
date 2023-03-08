@@ -1,0 +1,19 @@
+.swiper {
+  width: 390px;
+  height: 200px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 115px;
+  object-fit: cover;
+  border-radius: 20px;
+}

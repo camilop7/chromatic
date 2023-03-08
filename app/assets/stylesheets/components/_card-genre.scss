@@ -1,0 +1,23 @@
+.container-genre{
+  padding-top: 30px;
+  width: 100%;
+  background-color: black;
+  padding-bottom: 40px;
+}
+
+.card-genre .avatar-index-first-row{
+  display: flex;
+  justify-content: space-evenly;
+}
+.card-genre .avatar-index-second-row{
+  padding-top: 10%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.title-genre {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
