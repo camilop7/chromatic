@@ -1,8 +1,48 @@
-<div class ="show-event-name">
-  <%= @event.name %>
-</div>
+<div class="background-container">
+  <div class ="show-event-name">
+    <%= @event.name %>
+  </div>
 
 
-<div>
-  <img src=<%= @event.photo_url %> class="show-event-banner">
+  <div class="show-margin">
+    <img src=<%= @event.photo_url %> class="show-event-banner">
+  </div>
+
+  <div class="event-card-detail">
+    <div class="event-card-detail-name">
+      <%= @event.name %>
+    </div>
+
+    <div class="event_card_text">
+      <p> <strong>Venue:</strong> <%= @event.address %></p>
+      <p> <strong>Date:</strong> <%= @event.date %></p>
+      <p> <strong>Time:</strong> <%= @event.date %></p>
+    </div>
+
+    <div class="line-up">
+      <p class="d-flex justify-content-center"><strong>Line Up</strong></p>
+      <p class="d-flex justify-content-center"><%= @event.artist%><p>
+    </div>
+
+    <div class="more-information">
+      <p class="d-flex justify-content-center"><u><strong>More Information</strong></u></p>
+      <p class="d-flex justify-content-center">Live Aid was a multi-venue benefit concert held on Saturday 13 July 1985, as well as a music-based fundraising initiative. The original event was organised by Bob Geldof and Midge Ure to raise further funds for relief of the 1983–1985 famine in Ethiopia, a movement that started with the release of the successful charity single "Do They Know It's Christmas?" in December 1984. Billed as the "global jukebox", Live Aid was held simultaneously at Wembley Stadium in London, attended by about 72,000 people, and John F. Kennedy Stadium in Philadelphia, attended by 89,484 people.<p>
+    </div>
+
+    <div class="center-button">
+      <button class="interested_button">Interested</button>
+    </div>
+  </div>
+
+  <div class="find_us_text">
+    <p><strong>FIND US</strong></p>
+  </div>
+
+  <div class="card-map">
+    <div style="width: 80%; height: 300px; border-radius: 20px; border-style: solid; border-color: black;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
 </div>
