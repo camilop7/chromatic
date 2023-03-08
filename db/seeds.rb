@@ -14,10 +14,10 @@ puts 'destroying all the tables..'
 puts '-----------------------'
 puts '-----------------------'
 puts '-----------------------'
-User.destroy_all
 Event.destroy_all
-EventChatroom.destroy_all
+Chatroom.destroy_all
 Message.destroy_all
+User.destroy_all
 
 puts 'creating new user....'
 
@@ -31,7 +31,7 @@ puts "Created #{User.count} users"
 
 puts 'creating new events....'
 
-liveAid = Event.create(
+Event.create(
   name: "Live Aid 2023",
   address: "Wembley Arena, Arena Square, Engineers Way, London, HA9 0AA",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -39,7 +39,7 @@ liveAid = Event.create(
   photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
 )
 
-jazzNight = Event.create(
+Event.create(
   name: "Hoxton Jazz",
   address: "Troy Bar, 10 Hoxton Street, London, N1 6NG",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -47,7 +47,7 @@ jazzNight = Event.create(
   photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
 )
 
-take_that = Event.create(
+Event.create(
   name: "Take That Live",
   address: "The O2 Arena, Peninsula Square, London SE10 0DX",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -55,7 +55,7 @@ take_that = Event.create(
   photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
 )
 
-soho_nights = Event.create(
+Event.create(
   name: "Soho Nights - Cocktail Evening",
   address: "Soho Live Studios, 16 Carlisle St, London W1D 3BT",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -63,7 +63,7 @@ soho_nights = Event.create(
   photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
 )
 
-big_weekend = Event.create(
+Event.create(
   name: "Radio 1 Big Weekend",
   address: "Camperdown Park, DundeeT",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -76,44 +76,38 @@ puts "Created #{Event.count} events"
 # Event Chatrooms
 
 puts 'creating new chatrooms....'
-soho_nights_chatroom = EventChatroom.create(
-  name: "Radio 1 Big Weekend",
-  event_id: soho_nights.id,
-  user_id: emilie.id
+soho_nights_chatroom = Chatroom.create(
+  name: "Radio 1 Big Weekend"
 )
 
-big_weekend_chatroom = EventChatroom.create(
-  name: "Soho Nights - Cocktail Evening",
-  event_id: big_weekend.id,
-  user_id: jose.id
+big_weekend_chatroom = Chatroom.create(
+  name: "Soho Nights - Cocktail Evening"
 )
 
-take_that_chatroom = EventChatroom.create(
-  name: "Take That Live",
-  event_id: take_that.id,
-  user_id: alex.id
+take_that_chatroom = Chatroom.create(
+  name: "Take That Live"
 )
 
-puts "Created #{EventChatroom.count} chatrooms"
+puts "Created #{Chatroom.count} chatrooms"
 
 # Messages
 
 puts 'creating new messages....'
-message1 = Message.create(
+Message.create(
   content: "I am buzzing",
-  event_chatroom_id: big_weekend_chatroom.id,
+  chatroom_id: big_weekend_chatroom.id,
   user_id: jose.id
 )
 
-message2 = Message.create(
+Message.create(
   content: "Can't wait to go to this event!",
-  event_chatroom_id: soho_nights_chatroom.id,
+  chatroom_id: soho_nights_chatroom.id,
   user_id: emilie.id
 )
 
-message3 = Message.create(
+Message.create(
   content: "I have been excited for so long now!",
-  event_chatroom_id: take_that_chatroom.id,
+  chatroom_id: take_that_chatroom.id,
   user_id: alex.id
 )
 
