@@ -5,3 +5,11 @@
 <h1>GENRE</h1>
 
 <h1>EVENTS</h1>
+
+
+<% @events.each do |event| %>
+  <%= link_to event_path(event) do %>
+    <h2><%= event.name %></h2>
+  <% end %>
+
+<% end %>

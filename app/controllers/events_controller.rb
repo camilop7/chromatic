@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :find_events, only: %i[show edit update destroy]
 
   def index
-    @event = Event.all
+    @events = Event.all
   end
 
   def show
