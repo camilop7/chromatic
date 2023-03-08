@@ -7,7 +7,6 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @booking = Booking.new
   end
 
   def new
@@ -17,7 +16,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user_id = current_user.id
     if @event.save
-      redirect_to event_path(@honeybadger)
+      redirect_to event_path(@event)
     else
       render :new, status: :unprocessable_entity
     end
@@ -41,7 +40,7 @@ class EventsController < ApplicationController
 
   private
 
-  def find_event
+  def find_events
     @event = Event.find(params[:id])
   end
 
