@@ -63,7 +63,7 @@ Event.create(
   photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
 )
 
-Event.create(
+event1 = Event.create(
   name: "Radio 1 Big Weekend",
   address: "Camperdown Park, DundeeT",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -77,7 +77,8 @@ puts "Created #{Event.count} events"
 
 puts 'creating new chatrooms....'
 soho_nights_chatroom = Chatroom.create(
-  name: "Radio 1 Big Weekend"
+  name: "Radio 1 Big Weekend",
+  event_id: event1.id
 )
 
 big_weekend_chatroom = Chatroom.create(
