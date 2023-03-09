@@ -11,9 +11,6 @@
   <div class="content-container">
       <input placeholder="Location..." oninput="this.className = ''">
       <input placeholder="Dates..." oninput="this.className = ''">
-
-    <%= link_to "#" do %>
-      <a class="btn btn-flat d-flex justify-content-center offset-button" href="#">Book now</a>
-    <% end %>
+    <%= link_to "Search", events_path, class:"btn btn-flat d-flex justify-content-center offset-button" %>
   </div>
 </div>

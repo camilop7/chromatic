@@ -1,31 +1,25 @@
-// xxxxx
+
 #findeventForm {
   background-color: hsla(0, 0%, 0%, 0.35);
-  // margin: 40px auto;
   padding: 40px;
   width: 70%;
-  min-width: 300px;
-  width: 296px;
-  // height: 429px;
   left: 48px;
   top: 289px;
   border-radius: 5%;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
-  position: absolute;
+  border-color: #000000;
   input {
     border-radius: 50px;
     font-family: 'Ubuntu', sans-serif;
     max-width: 100%;
     padding: 10px;
     margin: 40px auto;
+    border-color: #000000;
   }
 
   .offset-button {
-    // position: absolute;
-    // bottom: 0;
-    // left: 50%;
-    // transform: translate(-50%, 50%);
+
   }
 }
 
@@ -33,8 +27,8 @@
 .btn-flat {
   color: white;
   padding: 8px 24px;
-  border-radius: 4px;
-  background: #670BFF;
+  border-radius: 70px;
+  background: #000000;
   transition: background 0.3s ease;
 }
 
