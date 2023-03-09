@@ -1,6 +1,25 @@
-<h1>Chromatic</h1>
-<h2>Discover events near you and meet people along the way</h2>
+<div class="container">
+  <h1>Chromatic</h1>
+  <h2>Discover events near you and meet people along the way</h2>
+</div>
 
 
+<div>
+  <div class="container findevent"form id="findeventForm" action="">
 
-    <%= link_to "Search", my_events_path, class: "search-link" %>
+      <h1>Find Event</h1>
+    <div class="content-container">
+      <%= link_to '#', class: 'location-event d-flex justify-content-center flex-column text-decoration-none text-white' do %>
+        <p><input placeholder="Location..." oninput="this.className = ''"></p>
+      <% end %>
+
+      <%= link_to '#', class: 'dates-event d-flex justify-content-center flex-column text-decoration-none text-white' do %>
+          <p><input placeholder="Dates..." oninput="this.className = ''"></p>
+      <% end %>
+        <%= link_to "#" do %>
+          <a class="btn btn-flat d-flex justify-content-center" href="#">Book now</a>
+        <% end %>
+    </div>
+  </div>
+</div>
+<%# aaaaaaaaaa %>
