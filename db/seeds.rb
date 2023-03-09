@@ -71,6 +71,16 @@ Event.create(
   photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
 )
 
+Event.create(
+  name: "Live Aid 2023",
+  address: "Wembley Arena, Arena Square, Engineers Way, London, HA9 0AA",
+  date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
+  artist: "Arctic Monkeys, The 1975, Sam Smith, Ed Sheeran, Elton John",
+  photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
+)
+
+
+
 puts "Created #{Event.count} events"
 
 # Event Chatrooms
