@@ -1,3 +1,4 @@
+
 <div class="container-swipping">
   <h1 class="title-events">THIS WEEK</h1>
 
@@ -6,14 +7,16 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-      <div class="swiper-slide"><%= image_tag "1975INDEX1.jpg", alt: "slide1" %></div>
-      <div class="swiper-slide"><%= image_tag "strokesINDEX.jpg", alt: "slide2" %></div>
-      <div class="swiper-slide"><%= image_tag "JojiINDEX.jpg", alt: "slide3" %></div>
-      <div class="swiper-slide"><%= image_tag "radiohead.jpg", alt: "slide4" %></div>
-      <div class="swiper-slide"><%= image_tag "radiohead.jpg", alt: "slide5" %></div>
+      <%@events.each do |event|%>
+      <div class="swiper-slide"><%= link_to event_path(event) do%>
+        <img src="<%= event.photo_url%>" alt="">
+        <% end %>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>
+
 
 <div class="container-genre">
   <div class="card-genre">
@@ -40,9 +43,23 @@
 <h1 class="title-events-index">EVENTS</h1>
 
 
-<% @events.each do |event| %>
-  <%= link_to event_path(event) do %>
-    <h2><%= event.name %></h2>
-  <% end %>
-
-<% end %>
+<div class="events-list-index">
+  <div class="cards-event">
+    <% @events.each do |event| %>
+      <div class="card-event-index">
+        <%= link_to event_path(event), class: "no-decoration" do %>
+          <img src="<%= event.photo_url%>" alt="">
+          <div class="card-text-index">
+            <div class="text-left">
+              <h2 class="card-title-index"><%= event.name.upcase %></h2>
+              <%# <p class="card-artist-index"><strong>Genre: </strong> <%= event.genre %></p>
+            </div>
+            <div class="text-right">
+              <p class="card-date-index"><%= event.date.strftime('%d-%m-%Y') %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
