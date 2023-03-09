@@ -14,9 +14,9 @@ puts 'destroying all the tables..'
 puts '-----------------------'
 puts '-----------------------'
 puts '-----------------------'
+Message.destroy_all
 Event.destroy_all
 Chatroom.destroy_all
-Message.destroy_all
 User.destroy_all
 
 puts 'creating new user....'
@@ -24,6 +24,7 @@ puts 'creating new user....'
 emilie = User.create(email: "emilie@gmail.com", password: "123456")
 jose = User.create(email: "jose@gmail.com", password: "123456")
 alex = User.create(email: "mary@gmail.com", password: "123456")
+camilo = User.create(email: "camilo@camilo.com", password: "123456")
 
 puts "Created #{User.count} users"
 
@@ -36,7 +37,7 @@ Event.create(
   address: "Wembley Arena, Arena Square, Engineers Way, London, HA9 0AA",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Arctic Monkeys, The 1975, Sam Smith, Ed Sheeran, Elton John",
-  photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
+  photo_url: "https://www.udiscovermusic.com/wp-content/uploads/2019/07/Live-Aid-GettyImages-84999050.jpg"
 )
 
 Event.create(
@@ -44,7 +45,7 @@ Event.create(
   address: "Troy Bar, 10 Hoxton Street, London, N1 6NG",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Jazzy Dave",
-  photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
+  photo_url: "https://www.sciencefriday.com/wp-content/uploads/2022/12/jazz-trumpet.jpg"
 )
 
 Event.create(
@@ -52,7 +53,7 @@ Event.create(
   address: "The O2 Arena, Peninsula Square, London SE10 0DX",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Take That",
-  photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
+  photo_url: "https://i.ytimg.com/vi/p7bowglDeCI/maxresdefault.jpg"
 )
 
 Event.create(
@@ -60,26 +61,57 @@ Event.create(
   address: "Soho Live Studios, 16 Carlisle St, London W1D 3BT",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Harry Styles. George Ezra. Becky Hill. Chase & Status. Dermot Kennedy",
-  photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
+  photo_url: "https://imagestore.ffm.to/link/b9571b326d68208967c4e3fe4f995df1.png"
 )
 
-event1 = Event.create(
+Event.create(
   name: "Radio 1 Big Weekend",
   address: "Camperdown Park, DundeeT",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Lewis Capaldi, Niall Horan, Lewis Capaldi",
-  photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
+  photo_url: "https://res.cloudinary.com/dwh6m5mbn/image/upload/c_lfill,w_830/v1637052426/adadad_leozps.png"
+)
+
+#New Events
+Event.create(
+  name: "Summertime Ball",
+  address: "Wembley Stadium, London, HA9 0WS",
+  date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
+  artist: "Arctic Monkeys, The 1975, Sam Smith, Ed Sheeran, Elton John",
+  photo_url: "https://assets.capitalfm.com/2022/24/summetime-ball-shop-1655201858-editorial-long-form-0.jpg"
 )
 
 Event.create(
-  name: "Live Aid 2023",
-  address: "Wembley Arena, Arena Square, Engineers Way, London, HA9 0AA",
+  name: "Glastonbury 2023",
+  address: "Worthy Farm, Worthy Lane, Pilton, Shepton Mallet, Somerset, BA4 4BY",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Arctic Monkeys, The 1975, Sam Smith, Ed Sheeran, Elton John",
-  photo_url: "https://www.guidetolondon.net/wp-content/uploads/Wembley-Arena.jpg"
+  photo_url: "https://cms.kerrang.com/images/Glastonbury-2023-header.jpg"
 )
 
+Event.create(
+  name: "Abba Voyage",
+  address: "1 Pudding Mill Lane, London, E15 2RU",
+  date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
+  artist: "Abba",
+  photo_url: "https://images.discovery-prod.axs.com/2022/04/abba-voyage-tickets_04-28-22_17_626abddb9be2d.jpg"
+)
 
+Event.create(
+  name: "Wireless Festival 2023",
+  address: "Finsbury Park, London",
+  date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
+  artist: "Arctic Monkeys, The 1975, Sam Smith, Ed Sheeran, Elton John",
+  photo_url: "https://media.timeout.com/images/105052183/image.jpg"
+)
+
+Event.create(
+  name: "Penn Fest 2023",
+  address: "Penn, Amersham, HP7 0PS",
+  date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
+  artist: "Arctic Monkeys, The 1975, Sam Smith, Ed Sheeran, Elton John",
+  photo_url: "https://cdn2.gigantic.com/static/images/campaign/820x500/penn_festival-6710228453.jpg"
+)
 
 puts "Created #{Event.count} events"
 
@@ -88,7 +120,6 @@ puts "Created #{Event.count} events"
 puts 'creating new chatrooms....'
 soho_nights_chatroom = Chatroom.create(
   name: "Radio 1 Big Weekend",
-  event_id: event1.id
 )
 
 big_weekend_chatroom = Chatroom.create(
