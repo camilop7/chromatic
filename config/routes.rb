@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "my_events", to: "pages#my_events"
 
-  resources :events do
-    resources :events_chatrooms, only: [:show] do
-      resources :messages, only: [:index, :new, :create, :destroy]
-    end
+  resources :events
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
   end
 end
