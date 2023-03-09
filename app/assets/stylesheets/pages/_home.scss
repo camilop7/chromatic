@@ -1,16 +1,14 @@
 // Specific CSS for your home-page
+.container {
+  background-color: red;
+}
 
-.search-link{
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+h1 {
+  color:white;
+  text-align: center;
+}
+
+h2 {
+  color:white;
+  text-align: center;
 }
