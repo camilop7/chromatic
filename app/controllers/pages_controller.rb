@@ -6,4 +6,8 @@ class PagesController < ApplicationController
 
   def my_events
   end
+
+  def profile
+  end
+
 end
