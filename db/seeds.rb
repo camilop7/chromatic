@@ -34,7 +34,7 @@ puts 'creating new events....'
 
 event1 = Event.create(
   name: "Live Aid 2023",
-  address: "Wembley Arena, Arena Square, Engineers Way, London, HA9 0AA",
+  address: "London, HA9 0AA",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Arctic Monkeys, The 1975, Sam Smith, Ed Sheeran, Elton John",
   photo_url: "https://www.udiscovermusic.com/wp-content/uploads/2019/07/Live-Aid-GettyImages-84999050.jpg",
@@ -52,7 +52,7 @@ event2 = Event.create(
 
 event3 = Event.create(
   name: "Take That Live",
-  address: "The O2 Arena, Peninsula Square, London, SE10 0DX",
+  address: "Manchester, M3 1AR",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Take That",
   photo_url: "https://i.ytimg.com/vi/p7bowglDeCI/maxresdefault.jpg",
@@ -61,7 +61,7 @@ event3 = Event.create(
 
 event4 = Event.create(
   name: "Soho Nights - Cocktail Evening",
-  address: "Soho Live Studios, 16 Carlisle Stree, London, W1D 3BT",
+  address: "London, W1D 3BT",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Harry Styles. George Ezra. Becky Hill. Chase & Status. Dermot Kennedy",
   photo_url: "https://imagestore.ffm.to/link/b9571b326d68208967c4e3fe4f995df1.png",
@@ -70,7 +70,7 @@ event4 = Event.create(
 
 event5 = Event.create(
   name: "Radio 1 Big Weekend",
-  address: "Camperdown Park, DundeeT",
+  address: "Camperdown Park, Dundee",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Lewis Capaldi, Niall Horan, Lewis Capaldi",
   photo_url: "https://res.cloudinary.com/dwh6m5mbn/image/upload/c_lfill,w_830/v1637052426/adadad_leozps.png",
@@ -89,7 +89,7 @@ event6 = Event.create(
 
 event7 = Event.create(
   name: "Glastonbury 2023",
-  address: "Worthy Farm, Worthy Lane, Pilton, Shepton Mallet, Somerset, BA4 4BY",
+  address: "Somerset, BA4 4BY",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
   artist: "Arctic Monkeys, The 1975, Sam Smith, Ed Sheeran, Elton John",
   photo_url: "https://cms.kerrang.com/images/Glastonbury-2023-header.jpg",
