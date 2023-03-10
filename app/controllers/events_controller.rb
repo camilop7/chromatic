@@ -1,8 +1,14 @@
 class EventsController < ApplicationController
   before_action :find_events, only: %i[show edit update destroy]
 
+    # @events = Event.all
+    # @events = Event.where(venue: "%london%")
   def index
-    @events = Event.all
+    if params[:address].present?
+      @events = Event.where("address ILIKE ?", "%#{params[:address]}%")
+    else
+      @events = Event.all
+    end
   end
 
   def show
