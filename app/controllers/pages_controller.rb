@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   end
 
   def profile
+    # @events = E
   end
 
 end

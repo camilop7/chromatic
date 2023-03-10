@@ -1,13 +1,8 @@
 <div class="navbar">
 
-  <%= link_to events_path, class: 'nav-event d-flex justify-content-center flex-column text-decoration-none text-white' do %>
+  <%= link_to search_events_path, class: 'nav-event d-flex justify-content-center flex-column text-decoration-none text-white' do %>
     <button class="button-search"type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
     <p class="navbar-p">Search</p>
-  <% end %>
-
-  <%= link_to my_events_path, class: 'nav-home d-flex justify-content-center flex-column text-decoration-none text-white'  do %>
-    <button class="button-my_events"type="button"><i class="fa-solid fa-bars"></i></button>
-    <p class="navbar-p">My Events</p>
   <% end %>
 
   <%= link_to profile_path, class: 'nav-profile d-flex justify-content-center flex-column text-decoration-none text-white' do %>

@@ -1,6 +1,8 @@
 <div class="home-top-container">
+ <div class="card-home-text">
   <h1>Chromatic</h1>
   <h2>Discover events near you<br>and meet new people<br>along the way</h2>
+
 </div>
 
 
@@ -9,11 +11,24 @@
 
   <h2>Find Event</h2>
   <div class="content-container">
-      <input placeholder="Location..." oninput="this.className = ''">
-      <input placeholder="Dates..." oninput="this.className = ''">
+      <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "location"
+      %>
 
-    <%= link_to "#" do %>
-      <a class="btn btn-flat d-flex justify-content-center offset-button" href="#">Book now</a>
-    <% end %>
+      <%= submit_tag "Search", class: "btn btn-flat" %>
+      <% end %>
+      <%# <input placeholder="Dates..." oninput="this.className = ''"> %>
+       <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "date"
+      %>
+      <%= submit_tag "Search", class: "btn btn-flat" %>
+      <% end %>
   </div>
+
 </div>
