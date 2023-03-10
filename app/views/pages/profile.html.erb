@@ -1,14 +1,18 @@
 <div class="profile-page-container">
 
 
-  <div class ="back-to-index d-flex">
-    <h1 class="title-profile-name">Hello Lukáš</h1>
-    <%= link_to events_path, class: "no-decoration text-white pe-2" do %>
-      <i class="fa-solid fa-angle-left no-decoration"></i>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
-    <% end %>
-      <%# <%= @event.name%>
+  <div class ="back-to-index">
+      <%= link_to events_path, class: "no-decoration text-white pe-2" do %>
+        <i class="fa-solid fa-angle-left no-decoration backtik"></i>
   </div>
+
+    <div class="profile-hello" >
+        <div class="avatar-profile">
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+      </div>
+      <h1 class="title-profile-name">Hello Lukáš</h1>
+      <% end %>
+    </div>
 
 
 
@@ -35,7 +39,7 @@
 
   <div class="container-genre">
   <div class="card-genre">
-    <h1 class="title-genre">Friends</h1>
+    <h1 class="title-friend">FRIENDS</h1>
       <div class= "avatar-index-first-row">
         <img src="https://ca.slack-edge.com/T02NE0241-U03BXKTHCEM-560844b1dce0-512" class="card-pop avatar" />
         <img src="https://ca.slack-edge.com/T02NE0241-U02KV2K84JJ-268a6271db86-512" class="card-pop avatar" />
