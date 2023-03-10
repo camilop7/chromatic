@@ -33,14 +33,20 @@
       <p class="d-flex justify-content-center"><%= @event.description%></p>
     </div>
 
-    <div class="center-button">
-      <%= form_tag(event_create_user_event_path(@event), method: :post) do %>
-        <%= hidden_field_tag :trigger_method, true %>
-        <%= submit_tag 'Interested' , class: "interested_button" %>
-      <% end %>
-      <%= link_to event_chatroom_path(@event, @event.chatroom) do %>
-        <button class="interested_button">Chatroom</button>
-      <% end %>
+    <div>
+      <div class="center-button">
+        <div>
+          <%= form_tag(event_create_user_event_path(@event), method: :post) do %>
+            <%= hidden_field_tag :trigger_method, true %>
+            <%= submit_tag 'Interested' , class: "interested_button" %>
+          <% end %>
+        <div>
+        <div class="top-button-interested">
+          <%= link_to event_chatroom_path(@event, @event.chatroom) do %>
+            <button class="interested_button">Chatroom</button>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 
