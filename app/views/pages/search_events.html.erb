@@ -1,0 +1,16 @@
+<div class="home-top-container">
+  <h1>Chromatic</h1>
+  <h2>Discover events near you<br>and meet new people<br>along the way</h2>
+</div>
+
+
+
+<div class="container findevent"form id="findeventForm" action="">
+
+  <h2>Find Event</h2>
+  <div class="content-container">
+      <input placeholder="Location..." oninput="this.className = ''">
+      <input placeholder="Dates..." oninput="this.className = ''">
+    <%= link_to "Search", events_path, class:"btn btn-flat d-flex justify-content-center offset-button" %>
+  </div>
+</div>
