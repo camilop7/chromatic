@@ -1,1 +1,53 @@
-<h1>hi from profile page</h1>
+<div class="profile-page-container">
+
+
+  <div class ="back-to-index d-flex">
+    <h1 class="title-profile-name">Hello Lukáš</h1>
+    <%= link_to events_path, class: "no-decoration text-white pe-2" do %>
+      <i class="fa-solid fa-angle-left no-decoration"></i>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+    <% end %>
+      <%# <%= @event.name%>
+  </div>
+
+
+
+
+  <div class="container-swipping">
+    <h1 class="title-events">MY EVENTS</h1>
+
+    <!-- Slider main container -->
+    <div data-controller="swiper" class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <% @events.each do |event|%>
+          <div class="swiper-slide"><%= link_to event_path(event) do%>
+            <img src="<%= event.photo_url%>" alt="">
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container-genre">
+  <div class="card-genre">
+    <h1 class="title-genre">Friends</h1>
+      <div class= "avatar-index-first-row">
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+      </div>
+      <div class="avatar-index-second-row">
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
+      </div>
+    </div>
+  </div>
+</div>
