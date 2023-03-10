@@ -142,11 +142,11 @@ take_that_chatroom = Chatroom.create(
   name: "Take That Live",
   event: event3
 )
-big_weekend_chatroom = Chatroom.create(
+soho_nights_chatroom = Chatroom.create(
   name: "Soho Nights - Cocktail Evening",
   event: event4
 )
-soho_nights_chatroom = Chatroom.create(
+big_weekend_chatroom = Chatroom.create(
   name: "Radio 1 Big Weekend",
   event: event5
 )
@@ -206,3 +206,25 @@ Message.create(
   user_id: camilo.id
 )
 puts "Created #{Message.count} messages"
+
+puts 'creating new user events....'
+
+UserEvent.create(
+  user_id: jose.id,
+  event_id: event5.id
+)
+
+UserEvent.create(
+  user_id: emilie.id,
+  event_id: event4.id
+)
+
+UserEvent.create(
+  user_id: alex.id,
+  event_id: event3.id
+)
+
+UserEvent.create(
+  user_id: camilo.id,
+  event_id: event3.id
+)
