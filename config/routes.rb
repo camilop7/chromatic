@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
 
   resources :events do
+    post "create_user_event", to: "events#create_user_event"
     resources :chatrooms, only: :show do
       resources :messages, only: :create
     end
