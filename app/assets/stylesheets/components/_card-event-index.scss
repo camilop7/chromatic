@@ -1,22 +1,22 @@
 
 .card-event-index{
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.987);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 10%;
   border-color: black;
   border-style: solid;
-
+  justify-content: space-between;
 }
 .cards-event img{
   width: 100%;
 }
 .card-title-index{
   font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content:left;
   align-items: left;
@@ -41,17 +41,16 @@
   font-family: 'Ubuntu', sans-serif;
   font-size: 10px;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content:right;
-
   padding: 10px;
 
 }
 
 .card-text-index {
   display: flex;
-
+  justify-content: space-between;
 }
 
 .no-decoration {
