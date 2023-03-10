@@ -5,6 +5,7 @@
   width: 100%;
   padding: 50px 0;
   font-family: 'Ubuntu', sans-serif;
+  position: relative;
   h1 {
     color:white;
     text-align: center;
@@ -36,5 +37,18 @@ h2 {
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
 }
+
+.card-home-text {
+  position: absolute;
+  top: 25vh;
+  left: 5vh;
+}
+.card-home-text h2 {
+  padding-bottom: 8vh;
+}
+
+
+
+
 
 // hello
