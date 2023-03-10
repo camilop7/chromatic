@@ -20,6 +20,15 @@ class EventsController < ApplicationController
       }]
   end
 
+  def create_user_event
+    @my_event = UserEvent.new
+    @event = Event.find(params[:event_id])
+    @user = current_user
+    @my_event.event = @event
+    @my_event.user = @user
+    @my_event.save!
+  end
+
   def new
   end
 
