@@ -32,7 +32,7 @@ puts "Created #{User.count} users"
 
 puts 'creating new events....'
 
-Event.create(
+event1 = Event.create(
   name: "Live Aid 2023",
   address: "Wembley Arena, Arena Square, Engineers Way, London, HA9 0AA",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -41,7 +41,7 @@ Event.create(
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!"
 )
 
-Event.create(
+event2 = Event.create(
   name: "Hoxton Jazz",
   address: "Troy Bar, 10 Hoxton Street, London, N1 6NG",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -50,7 +50,7 @@ Event.create(
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!"
 )
 
-Event.create(
+event3 = Event.create(
   name: "Take That Live",
   address: "The O2 Arena, Peninsula Square, London, SE10 0DX",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -59,7 +59,7 @@ Event.create(
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!"
 )
 
-Event.create(
+event4 = Event.create(
   name: "Soho Nights - Cocktail Evening",
   address: "Soho Live Studios, 16 Carlisle Stree, London, W1D 3BT",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -68,7 +68,7 @@ Event.create(
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!"
 )
 
-Event.create(
+event5 = Event.create(
   name: "Radio 1 Big Weekend",
   address: "Camperdown Park, DundeeT",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -78,7 +78,7 @@ Event.create(
 )
 
 # New Events
-Event.create(
+event6 = Event.create(
   name: "Summertime Ball",
   address: "Wembley Stadium, London, HA9 0WS",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -87,7 +87,7 @@ Event.create(
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!"
 )
 
-Event.create(
+event7 = Event.create(
   name: "Glastonbury 2023",
   address: "Worthy Farm, Worthy Lane, Pilton, Shepton Mallet, Somerset, BA4 4BY",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -96,7 +96,7 @@ Event.create(
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!"
 )
 
-Event.create(
+event8 = Event.create(
   name: "Abba Voyage",
   address: "1 Pudding Mill Lane, London, E15 2RU",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -105,7 +105,7 @@ Event.create(
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!"
 )
 
-Event.create(
+event9 = Event.create(
   name: "Wireless Festival 2023",
   address: "Finsbury Park, London",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -114,7 +114,7 @@ Event.create(
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!"
 )
 
-Event.create(
+event10 = Event.create(
   name: "Penn Fest 2023",
   address: "Penn, Amersham, HP7 0PS",
   date: Faker::Date.between(from: '2023-03-17', to: '2023-04-30'),
@@ -128,17 +128,54 @@ puts "Created #{Event.count} events"
 # Event Chatrooms
 
 puts 'creating new chatrooms....'
-soho_nights_chatroom = Chatroom.create(
-  name: "Radio 1 Big Weekend"
+live_aid_chatroom = Chatroom.create(
+  name: "Live Aid 2023",
+  event: event1
 )
 
-big_weekend_chatroom = Chatroom.create(
-  name: "Soho Nights - Cocktail Evening"
+hoxton_jazz_chatroom = Chatroom.create(
+  name: "Hoxton Jazz",
+  event: event2
 )
 
 take_that_chatroom = Chatroom.create(
-  name: "Take That Live"
+  name: "Take That Live",
+  event: event3
 )
+big_weekend_chatroom = Chatroom.create(
+  name: "Soho Nights - Cocktail Evening",
+  event: event4
+)
+soho_nights_chatroom = Chatroom.create(
+  name: "Radio 1 Big Weekend",
+  event: event5
+)
+
+summertime_ball_chatroom = Chatroom.create(
+  name: "Summertime Ball",
+  event: event6
+)
+
+glastonbury_chatroom = Chatroom.create(
+  name: "Glastonbury 2023",
+  event: event7
+)
+
+abba_voyage_chatroom = Chatroom.create(
+  name: "Abba Voyage",
+  event: event8
+)
+
+wireless_chatroom = Chatroom.create(
+  name: "Wireless Festivall 2023",
+  event: event9
+)
+
+penn_fest_chatroom = Chatroom.create(
+  name: "Penn Fest 2023",
+  event: event10
+)
+
 
 puts "Created #{Chatroom.count} chatrooms"
 
