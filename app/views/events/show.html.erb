@@ -34,7 +34,9 @@
     </div>
 
     <div class="center-button">
-      <button class="interested_button">Interested</button>
+      <%= link_to event_chatroom_path(@event, @event.chatroom) do %>
+        <button class="interested_button">Chatroom</button>
+      <% end %>
     </div>
   </div>
 
