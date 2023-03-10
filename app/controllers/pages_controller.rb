@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    # @events = E
+    @user_events = UserEvent.where(user: current_user)
   end
 
 end
