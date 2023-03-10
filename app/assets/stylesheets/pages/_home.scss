@@ -5,46 +5,36 @@
   width: 100%;
   padding: 50px 0;
   font-family: 'Ubuntu', sans-serif;
-  position: relative;
-  h1 {
-    color:white;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight:700;
-    font-size: 64px;
-    // padding-right:32px;
-    // padding-bottom: 30px;
-  }
-  h2 {
-    color:white;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight:700;
-    font-size: 24px;
-  }
 }
 
 h1 {
-  // color:white;
-  // text-align: center;
-  // font-family: 'Ubuntu', sans-serif;
-  // font-weight:700;
-  // font-size: 24px;
+  color:white;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:700;
+  font-size: 64px;
+  // padding-right:32px;
+  // padding-bottom: 30px;
 }
 
 h2 {
   color:white;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
+  font-weight:700;
+  font-size: 24px;
+}
+
+.btn-centre {
+  align-self: "center"
 }
 
 .card-home-text {
-  position: absolute;
-  top: 25vh;
+  top: 0vh;
   left: 5vh;
 }
 .card-home-text h2 {
-  padding-bottom: 8vh;
+  padding-bottom: 2vh;
 }
 
 

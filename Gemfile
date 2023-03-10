@@ -48,6 +48,9 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 gem "sassc-rails"
 
+# Include bootstrap-datepicker-rails in Gemfile
+gem 'bootstrap-datepicker-rails'
+
 # Cludinary security
 gem "dotenv-rails", groups: [:development, :test]
 
