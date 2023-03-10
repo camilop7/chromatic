@@ -1,34 +1,23 @@
 <div class="home-top-container">
- <div class="card-home-text">
-  <h1>Chromatic</h1>
-  <h2>Discover events near you<br>and meet new people<br>along the way</h2>
-
-</div>
-
-
-
-<div class="container findevent"form id="findeventForm" action="">
-
-  <h2>Find Event</h2>
-  <div class="content-container">
-      <%= form_with url: events_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "location"
-      %>
-
-      <%= submit_tag "Search", class: "btn btn-flat" %>
-      <% end %>
-      <%# <input placeholder="Dates..." oninput="this.className = ''"> %>
-       <%= form_with url: events_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "date"
-      %>
-      <%= submit_tag "Search", class: "btn btn-flat" %>
-      <% end %>
+  <div class="card-home-text">
+    <h1>Chromatic</h1>
+    <h2>Discover events near you<br>and meet new people<br>along the way</h2>
   </div>
 
+  <div class="container findevent"form id="findeventForm" action="">
+    <h2>Find Event</h2>
+    <div class="content-container">
+        <%= form_with url: events_path, method: :get, class: do %>
+          <%= text_field_tag :city,
+          params[:city],
+          class: "form-control",
+          placeholder: "location"
+          %>
+
+          <input type="date" class="date" name="date" id="date">
+
+          <%= submit_tag "Search", class: "btn btn-flat btn-centre" %>
+        <% end %>
+    </div>
+  </div>
 </div>
