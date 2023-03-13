@@ -12,6 +12,6 @@ Rails.application.routes.draw do
       resources :messages, only: :create
     end
   end
-
   resources :user_events, only: :destroy
+  resources :friendships, only: [:create, :update, :destroy, :index]
 end

@@ -1,0 +1,30 @@
+.login-title {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 20px 20px 0px 20px;
+}
+
+.login-container {
+  margin: 10px;
+  background-color: black;
+  border-radius: 5%;
+  padding: 20px;
+}
+
+.form-inputs {
+  color: white;
+}
+
+.form-actions .btn {
+  background: #B41BD0;
+  border-style: solid;
+  border-color: white;
+  border-radius: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+}
