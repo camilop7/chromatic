@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :chatrooms
   has_many :events, through: :chatrooms
   has_many :messages
+  has_many :friendships
 end
