@@ -1,3 +1,4 @@
 class Friendship < ApplicationRecord
-has_many :users
+  belongs_to :user, class_name: "User"
+  belongs_to :friend, class_name: "User"
 end
