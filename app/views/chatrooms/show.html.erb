@@ -1,7 +1,40 @@
+<div class="chatroom-banner">
+  <%= link_to event_path(@event.id), class: "no-decoration text-white" do %>
+    <i class="fa-solid fa-angle-left no-decoration fa-xl" style="color: black;"></i>
+  <% end %>
+  <p class="chatroom-title"><strong><%= @chatroom.name %></strong></p>
+
+  <!-- Button trigger modal -->
+  <i class="fa-solid fa-people-group fa-xl" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+</div>
+
 <div class="container chatroom" data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
-  <h1><strong><%= @chatroom.name %></strong></h1>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" style="color: black;" id="exampleModalLabel">Chat Contributers</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <% @all_the_people.each do |people| %>
+              <li>
+                <%= people.name %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
@@ -12,6 +45,8 @@
       </div>
     <% end %>
   </div>
+
+
 
 
  <div class="card-message">
@@ -26,5 +61,4 @@
 
   <% end %>
  </div>
-
 </div>

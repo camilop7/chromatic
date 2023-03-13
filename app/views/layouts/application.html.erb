@@ -19,6 +19,11 @@
   <body>
     <%= render "shared/flashes" %>
     <%= yield %>
+    <% if current_user %>
     <%= render "shared/navbar" %>
+    <% else  %>
+    <div style="height:80px;"></div>
+
+    <% end %>
   </body>
 </html>

@@ -1,5 +1,5 @@
 class UserEvent < ApplicationRecord
   belongs_to :user
   belongs_to :event
-  validates :event, uniqueness: true
+  validates :event, uniqueness: { scope: :user_id }
 end
