@@ -4,14 +4,14 @@
 
   <div class ="back-to-index">
       <%= link_to events_path, class: "no-decoration text-white pe-2" do %>
-        <i class="fa-solid fa-angle-left no-decoration backtik"></i>
   </div>
+      <i class="fa-solid fa-angle-left backtick"></i>
 
   <div class="profile-hello" >
       <div class="avatar-profile">
       <img src="https://ca.slack-edge.com/T02NE0241-U01HX4EMWG7-2882a4f4d121-512" class="card-avatar-profile avatar" />
     </div>
-    <h1 class="title-profile-name">Hello Lukáš</h1>
+    <h1 class="title-profile-name">Hello <%= current_user.name %></h1>
     <% end %>
   </div>
 
