@@ -34,11 +34,14 @@
     </div>
 
     <div>
+      <div class="find_us_text">
+        <p><strong>Interested?</strong></p>
+      </div>
       <div class="center-button">
         <div>
           <%= form_tag(event_create_user_event_path(@event), method: :post) do %>
             <%= hidden_field_tag :trigger_method, true %>
-            <%= submit_tag 'Interested' , class: "interested_button" %>
+            <%= submit_tag 'Add to My Events' , class: "interested_button" %>
           <% end %>
         <div>
         <div class="top-button-interested">
