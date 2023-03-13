@@ -29,9 +29,22 @@
 .profile-hello{
   text-align: center;
   margin-top: -90;
+
 }
 
-.backtik {
-  margin-left: 20px;
-  margin-top: 40px;
+.backtick {
+  color: rgb(234, 12, 12);
+
+}
+
+.fa-angle-left::before {
+  content: "\f104";
+  padding-left: 30px;
+  font-size: 25px;
+  color: white;
+}
+
+.profile-page-container{
+  padding-top: -100%;
+
 }

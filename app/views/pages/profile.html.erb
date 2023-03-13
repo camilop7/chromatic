@@ -1,18 +1,19 @@
+
 <div class="profile-page-container">
 
 
   <div class ="back-to-index">
       <%= link_to events_path, class: "no-decoration text-white pe-2" do %>
-        <i class="fa-solid fa-angle-left no-decoration backtik"></i>
   </div>
+      <i class="fa-solid fa-angle-left backtick"></i>
 
-    <div class="profile-hello" >
-        <div class="avatar-profile">
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
-      </div>
-      <h1 class="title-profile-name">Hello Lukáš</h1>
-      <% end %>
+  <div class="profile-hello" >
+      <div class="avatar-profile">
+      <img src="https://ca.slack-edge.com/T02NE0241-U01HX4EMWG7-2882a4f4d121-512" class="card-avatar-profile avatar" />
     </div>
+    <h1 class="title-profile-name">Hello <%= current_user.name %></h1>
+    <% end %>
+  </div>
 
 
 
@@ -25,9 +26,10 @@
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <% @user_events.each do |event|%>
-          <div class="swiper-slide"><%= link_to event_path(event) do%>
-            <img src="<%= event.event.photo_url%>" alt="">
+        <% @user_events.each do |user_event| %>
+          <div class="swiper-slide">
+            <%= link_to event_path(user_event.event) do%>
+              <img src="<%= user_event.event.photo_url%>" alt="">
             <% end %>
           </div>
         <% end %>
@@ -40,7 +42,10 @@
   <div class="container-genre">
   <div class="card-genre">
     <h1 class="title-friend">FRIENDS</h1>
-      <div class= "avatar-index-first-row">
+      <% @friends.each do |user| %>
+        <h1><%= user.name %></h1>
+      <% end %>
+      <%# <div class= "avatar-index-first-row">
         <img src="https://ca.slack-edge.com/T02NE0241-U03BXKTHCEM-560844b1dce0-512" class="card-pop avatar" />
         <img src="https://ca.slack-edge.com/T02NE0241-U02KV2K84JJ-268a6271db86-512" class="card-pop avatar" />
         <img src="https://ca.slack-edge.com/T02NE0241-U03BLPQSHA6-f3eb46882dab-512" class="card-pop avatar" />
@@ -51,7 +56,7 @@
         <img src="https://ca.slack-edge.com/T02NE0241-U03Q1L5102V-8f5bffc920e3-512" class="card-pop avatar" />
         <img src="https://ca.slack-edge.com/T02NE0241-U045Q0RPL0K-111a908ca1f8-512" class="card-pop avatar" />
         <img src="https://ca.slack-edge.com/T02NE0241-U03PRDJEMNG-c649a4eb21a3-512" class="card-pop avatar" />
-      </div>
+      </div> %>
     </div>
   </div>
 </div>

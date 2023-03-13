@@ -30,15 +30,23 @@
 
     <div class="more-information">
       <p class="d-flex justify-content-center"><u><strong>More Information</strong></u></p>
-      <p class="d-flex justify-content-center"><%= @event.description%></p>
+      <p class="d-flex justify-content-center" style="text-align: center"><%= @event.description%></p>
     </div>
 
     <div>
+      <div class="find_us_text">
+        <p><strong>Interested?</strong></p>
+      </div>
       <div class="center-button">
         <div>
-          <%= form_tag(event_create_user_event_path(@event), method: :post) do %>
-            <%= hidden_field_tag :trigger_method, true %>
-            <%= submit_tag 'Interested' , class: "interested_button" %>
+
+          <% if @user_event %>
+            <%= link_to "remove", user_event_path(@user_event), data: { turbo_method: :delete } %>
+          <% else %>
+            <%= form_tag(event_user_events_path(@event), method: :post) do %>
+              <%= hidden_field_tag :trigger_method, true %>
+              <%= submit_tag 'Add to My Events' , class: "interested_button" %>
+            <% end %>
           <% end %>
         <div>
         <div class="top-button-interested">
@@ -55,7 +63,7 @@
   </div>
 
   <div class="card-map">
-    <div style="width: 80%; height: 300px; border-radius: 20px; border-style: solid; border-color: black;"
+    <div style="width: 80%; height: 300px; border-radius: 20px; border-style: solid; border-color: black; border-style: solid; border-color: white; border-width: 5px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">

@@ -21,10 +21,10 @@ User.destroy_all
 
 puts 'creating new user....'
 
-emilie = User.create(email: "emilie@gmail.com", password: "123456", name: "Timmy C")
-jose = User.create(email: "jose@gmail.com", password: "123456", name: "Bill Gates")
-alex = User.create(email: "alex@gmail.com", password: "123456", name: "J Bezos")
-camilo = User.create(email: "camilo@camilo.com", password: "123456", name: "Elon the Great")
+emilie = User.create(email: "emilie@gmail.com", password: "123456", name: "Timmy C", avatar_img: "https://upload.wikimedia.org/wikipedia/commons/e/e1/%D0%A2%D0%B8%D0%BC_%D0%9A%D1%83%D0%BA_%2802-09-2021%29.jpg")
+jose = User.create(email: "jose@gmail.com", password: "123456", name: "Bill Gates", avatar_img: "https://imageio.forbes.com/specials-images/imageserve/62d599ede3ff49f348f9b9b4/0x0.jpg?format=jpg&crop=821,821,x155,y340,safe&height=416&width=416&fit=bounds")
+alex = User.create(email: "alex@gmail.com", password: "123456", name: "J Bezos", avatar_img: "https://imageio.forbes.com/specials-images/imageserve/5bb22ae84bbe6f67d2e82e05/0x0.jpg?format=jpg&crop=1012,1013,x627,y129,safe&height=416&width=416&fit=bounds")
+camilo = User.create(email: "camilo@camilo.com", password: "123456", name: "Elon the Great", avatar_img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg")
 
 puts "Created #{User.count} users"
 
