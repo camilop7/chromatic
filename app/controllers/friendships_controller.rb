@@ -1,4 +1,8 @@
 class FriendshipsController < ApplicationController
+  def index
+    @friendships = current_user.friendships
+  end
+
   def create
     @friendship = current_user.friendships.build(friend_id: params[:friend_id], status: 'pending')
     if @friendship.save
@@ -27,7 +31,5 @@ class FriendshipsController < ApplicationController
     redirect_to current_user
   end
 
-  def index
-    @friendships = current_user.friendships
-  end
+
 end
