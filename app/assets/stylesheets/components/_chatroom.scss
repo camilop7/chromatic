@@ -1,27 +1,31 @@
 .chatroom {
-  background: white;
   height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
   margin-bottom: 10vh;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: white;
 
   h1 {
     border-bottom: 1px solid $gray-200;
     margin-bottom: 0;
     padding: 1rem;
+    font-family: 'Ubuntu', sans-serif;
   }
 
   .messages {
     height: 100%;
     overflow: scroll;
     padding: 1rem;
+    font-family: 'Ubuntu', sans-serif;
   }
 
   #new_message {
     border-top: 1px solid $gray-200;
     padding: 1rem;
+    font-family: 'Ubuntu', sans-serif;
 
     .form-group {
       margin-bottom: 0;
@@ -31,6 +35,7 @@
 
 .content{
   border-radius: 30%;
+  font-family: 'Ubuntu', sans-serif;
 }
 .submit-new-message-buttom{
   border-radius: 50%;
@@ -40,11 +45,34 @@
   height: 40px;
   margin-top: 4%;
   margin-left: 4%;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .form-control{
  border-radius: 3vh;
 }
 
+.chatroom-banner {
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  width: 100%;
+
+}
+
+ .chatroom-title{
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 24px;
+  margin-bottom: 0px;
+  padding-left: 20px;
+}
+
+.card-message {
+  border-top: solid;
+  border-color: black;
+}
 
 // }
