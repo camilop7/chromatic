@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   get "search_events", to: "pages#search_events"
 
 
-  resources :events do
+  resources :events, only: [:create, :destroy] do
     post "create_user_event", to: "events#create_user_event"
+    delete "destroy_user_event", to: "events#destroy_user_event"
     resources :chatrooms, only: :show do
       resources :messages, only: :create
     end

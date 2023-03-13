@@ -1,7 +1,18 @@
 <div class="container chatroom" data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
-  <h1><strong><%= @chatroom.name %></strong></h1>
+  <div class="header">
+    <%= link_to event_path(@event.id), class: "no-decoration text-white pe-2" do %>
+      <i class="fa-solid fa-angle-left no-decoration" style="color:black;"></i>
+    <% end %>
+    <p><strong><%= @chatroom.name %></strong></p>
+    <i class="fa-solid fa-angle-left no-decoration" style="color:black;">
+      <% @all_the_people.each do |message| %>
+      <% end %>
+    </i>
+
+  </div>
+
 
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
@@ -12,6 +23,8 @@
       </div>
     <% end %>
   </div>
+
+
 
 
  <div class="card-message">
