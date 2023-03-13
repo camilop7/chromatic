@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :find_events, only: %i[show edit update destroy]
+  before_action :find_event, only: %i[show edit update destroy]
 
     # @events = Event.all
     # @events = Event.where(venue: "%london%")
@@ -13,20 +13,12 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @user_event = UserEvent.find_by(event: @event, user: current_user)
 
     @markers = [{
         lat: @event.latitude,
         lng: @event.longitude
       }]
-  end
-
-  def create_user_event
-    @my_event = UserEvent.new
-    @event = Event.find(params[:event_id])
-    @user = current_user
-    @my_event.event = @event
-    @my_event.user = @user
-    @my_event.save!
   end
 
   def new
@@ -60,7 +52,7 @@ class EventsController < ApplicationController
 
   private
 
-  def find_events
+  def find_event
     @event = Event.find(params[:id])
   end
 

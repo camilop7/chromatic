@@ -1,3 +1,4 @@
+
 <div class="profile-page-container">
 
 
@@ -6,13 +7,13 @@
         <i class="fa-solid fa-angle-left no-decoration backtik"></i>
   </div>
 
-    <div class="profile-hello" >
-        <div class="avatar-profile">
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pop avatar" />
-      </div>
-      <h1 class="title-profile-name">Hello Lukáš</h1>
-      <% end %>
+  <div class="profile-hello" >
+      <div class="avatar-profile">
+      <img src="https://ca.slack-edge.com/T02NE0241-U01HX4EMWG7-2882a4f4d121-512" class="card-avatar-profile avatar" />
     </div>
+    <h1 class="title-profile-name">Hello Lukáš</h1>
+    <% end %>
+  </div>
 
 
 
@@ -25,9 +26,10 @@
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <% @user_events.each do |event|%>
-          <div class="swiper-slide"><%= link_to event_path(event) do%>
-            <img src="<%= event.event.photo_url%>" alt="">
+        <% @user_events.each do |user_event| %>
+          <div class="swiper-slide">
+            <%= link_to event_path(user_event.event) do%>
+              <img src="<%= user_event.event.photo_url%>" alt="">
             <% end %>
           </div>
         <% end %>
