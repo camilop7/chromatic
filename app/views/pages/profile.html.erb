@@ -26,9 +26,10 @@
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <% @user_events.each do |event|%>
-          <div class="swiper-slide"><%= link_to event_path(event) do%>
-            <img src="<%= event.event.photo_url%>" alt="">
+        <% @user_events.each do |user_event| %>
+          <div class="swiper-slide">
+            <%= link_to event_path(user_event.event) do%>
+              <img src="<%= user_event.event.photo_url%>" alt="">
             <% end %>
           </div>
         <% end %>
