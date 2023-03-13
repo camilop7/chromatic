@@ -1,27 +1,44 @@
 
-#findeventForm {
+.home-top-container {
+    width: 100%;
+    padding: 50px 0;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 90px;
+    padding-bottom: 10px;
+}
 
+.findeventtitle {
+  color: white;
+  padding-left: 60px;
+}
+
+#findeventForm {
   background-color: hsla(0, 0%, 0%, 0.35);
-  padding: 40px;
-  width: 70%;
+  padding: 31px;
+  padding-top: 35px;
+  padding-bottom: 1px;
+  width: 80%;
   left: 48px;
-  top: 289px;
-  border-radius: 5%;
+  // top: 289px;
+  border-radius: 56px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   border-color: #000000;
+  height: 450 px;
   input {
     border-radius: 50px;
     font-family: 'Ubuntu', sans-serif;
-    max-width: 100%;
+    width: 100%;
     padding: 10px;
-    margin: 40px auto;
+    margin: 36px auto;
     border-color: #000000;
+    text-align: center;
+    text-decoration-color: #000000;
   }
 
-  .offset-button {
+//   .offset-button {
 
-  }
+//   }
 }
 
 
@@ -31,9 +48,14 @@
   border-radius: 70px;
   background: #000000;
   transition: background 0.3s ease;
+  width: 184px;
 }
 
 .btn-flat:hover {
   background: #4D04C4;
   color: white;
+}
+
+.form-control {
+  width:90%;
 }
