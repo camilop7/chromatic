@@ -3,5 +3,6 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.find(params[:id])
     @event = Event.find(params[:event_id])
     @message = Message.new
+    @all_the_people = Message.where(chatroom: @chatroom).map { |record| record.user }
   end
 end
