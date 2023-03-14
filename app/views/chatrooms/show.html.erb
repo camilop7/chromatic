@@ -25,7 +25,6 @@
             <% @all_the_people.each do |person| %>
               <li class="person-contributer-box">
                 <%= person.name %>
-                <!-- <%= person.cloudinaryphoto %>  NEED TO ADD PHOTO REQUEST-->
                 <% if person.is_a_friend?(current_user) %>
                   <p><%= person.name %> is already a friend</p>
                 <% else %>
