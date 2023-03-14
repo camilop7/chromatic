@@ -42,8 +42,12 @@
   <div class="container-genre">
   <div class="card-genre">
     <h1 class="title-friend">FRIENDS</h1>
-      <% @friends.each do |user| %>
-        <h1><%= user.name %></h1>
+      <% if @friendships.empty? %>
+        <p class="friend-name">no friends</p>
+      <% else %>
+        <% @friendships.each do |friendship| %>
+          <p class="friend-name"><%= friendship.other_user(current_user).name %> <%= link_to "remove", friendship_path(friendship), data: { turbo_method: :delete } %></p>
+        <% end %>
       <% end %>
       <%# <div class= "avatar-index-first-row">
         <img src="https://ca.slack-edge.com/T02NE0241-U03BXKTHCEM-560844b1dce0-512" class="card-pop avatar" />
