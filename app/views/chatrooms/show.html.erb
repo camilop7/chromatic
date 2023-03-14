@@ -25,7 +25,7 @@
             <% @all_the_people.each do |person| %>
               <li>
                 <%= person.name %>
-                <% if person.is_friend?(current_user) %>
+                <% if person.is_a_friend?(current_user) %>
                   <p><%= person.name %> is already a friend</p>
                 <% else %>
                   <%= simple_form_for Friendship.new do |f| %>
