@@ -52,11 +52,11 @@ gem "sassc-rails"
 # Include bootstrap-datepicker-rails in Gemfile
 gem 'bootstrap-datepicker-rails'
 
-# Cludinary security
-gem "dotenv-rails", groups: [:development, :test]
-
 #Cloudinary
 gem "cloudinary"
+
+# Cludinary security
+gem "dotenv-rails", groups: [:development, :test]
 
 #Adding Maps
 gem "geocoder"
