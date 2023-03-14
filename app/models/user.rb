@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :messages
   has_many :friendships
 
+  has_one_attached :photo
+
   def is_a_friend?(user)
     Friendship.where(user: self, friend: user).or(Friendship.where(user: user, friend: self)).any?
   end
