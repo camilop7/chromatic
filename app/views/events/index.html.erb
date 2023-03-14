@@ -22,17 +22,39 @@
   <div class="card-genre">
     <h1 class="title-genre">GENRE</h1>
       <div class= "avatar-index-first-row">
-        <img src="<%= asset_url("rock copie.jpg") %>"class="card-pop avatar" />
-        <img src="<%= asset_url("jazz copie.jpg") %>" class="card-pop avatar" />
-        <img src="<%= asset_url("classic.jpg") %>" class="card-pop avatar" />
-        <img src="<%= asset_url("electro.jpg") %>" class="card-pop avatar" />
+        <%= link_to events_by_genre_path('Rock') do %>
+          <%= image_tag('rock copie.jpg', class: 'avatar') %>
+        <% end %>
 
+        <%= link_to events_by_genre_path('Jazz') do %>
+          <%= image_tag('jazz copie.jpg', class: 'avatar') %>
+        <% end %>
+
+        <%= link_to events_by_genre_path('Classic') do %>
+          <%= image_tag('classic.jpg', class: 'avatar') %>
+        <% end %>
+
+        <%= link_to events_by_genre_path('Electronic') do %>
+          <%= image_tag('electro.jpg', class: 'avatar') %>
+        <% end %>
       </div>
       <div class="avatar-index-second-row">
-        <img src="<%= asset_url("blues copie.jpg") %>" class="card-pop avatar" />
-        <img src="<%= asset_url("pop-good.jpg") %>" class="card-pop avatar" />
-        <img src="<%= asset_url("r&b.jpg") %>" class="card-pop avatar" />
-        <img src="<%= asset_url("rap copie.jpg") %>" class="card-pop avatar" />
+
+        <%= link_to events_by_genre_path('Blues') do %>
+          <%= image_tag('blues copie.jpg', class: 'avatar') %>
+        <% end %>
+
+        <%= link_to events_by_genre_path('Pop') do %>
+          <%= image_tag('pop-good.jpg', class: 'avatar') %>
+        <% end %>
+
+        <%= link_to events_by_genre_path('R&B') do %>
+          <%= image_tag('r&b.jpg', class: 'avatar') %>
+        <% end %>
+
+        <%= link_to events_by_genre_path('Rap') do %>
+          <%= image_tag('rap copie.jpg', class: 'avatar') %>
+        <% end %>
       </div>
     </div>
   </div>
