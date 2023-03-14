@@ -9,7 +9,6 @@
   background-color: white;
 
   h1 {
-    border-bottom: 1px solid $gray-200;
     margin-bottom: 0;
     padding: 1rem;
     font-family: 'Ubuntu', sans-serif;
@@ -73,6 +72,39 @@
 .card-message {
   border-top: solid;
   border-color: black;
+}
+
+
+// modal styling
+
+.modal-header {
+  background-color: lightgray;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+}
+
+.modal-content {
+  border-radius: 5%;
+}
+
+.contributer-box {
+  padding: 0;
+}
+.person-contributer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  padding: 5%;
+  margin: 2%;
+  border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+}
+
+.simple_form.new_friendship {
+  display: flex;
+  align-items: center;
 }
 
 // }

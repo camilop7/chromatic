@@ -11,7 +11,7 @@
 <div class="container chatroom" data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
-  
+
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -21,10 +21,20 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <ul>
-            <% @all_the_people.each do |people| %>
-              <li>
-                <%= people.name %>
+          <ul class ="contributer-box">
+            <% @all_the_people.each do |person| %>
+              <li class="person-contributer-box">
+                <%= person.name %>
+                <% if person.is_a_friend?(current_user) %>
+                  <p><%= person.name %> is already a friend</p>
+                <% else %>
+                  <%= simple_form_for Friendship.new do |f| %>
+                    <%= f.input :friend_id, as: :hidden, input_html: { value: person.id } %>
+                    <button type="submit" class="btn" style="color: white">
+                      <i class="fa-solid fa-user-plus fa-xl"></i>
+                    </button>
+                  <% end %>
+                <% end %>
               </li>
             <% end %>
           </ul>
