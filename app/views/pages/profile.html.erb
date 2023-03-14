@@ -3,70 +3,71 @@
 
 
   <div class ="back-to-index d-flex">
-      <%= link_to events_path , class: "no-decoration text-white pe-2" do %>
+    <%= link_to events_path , class: "no-decoration text-white pe-2" do %>
       <i class="fa-solid fa-angle-left backtick"></i>
-      <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link-logout no-decoration text-white" %>
+    <% end %>
+    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link-logout no-decoration text-white" %>
   </div>
 
 
   <div class="profile-hello" >
-    <div class="avatar-profile">
-    <% if current_user.photo.attached? %>
-      <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
-    <% else %>
-      <%= image_tag "classic.jpg" %>
-    <% end %>
+    <div class="avatar">
+      <% if current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <%= image_tag "classic.jpg" %>
+      <% end %>
     </div>
     <h1 class="title-profile-name">Hello <%= current_user.name %></h1>
-    <% end %>
   </div>
 
 
-<div class="container-profile-everything">
+  <div class="container-profile-everything">
 
-  <div class="container-swipping">
-    <h1 class="title-events">MY EVENTS</h1>
+    <div class="container-swipping">
+      <h1 class="title-events">MY EVENTS</h1>
 
-    <!-- Slider main container -->
-    <div data-controller="swiper" class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <% @user_events.each do |user_event| %>
-          <div class="swiper-slide">
-            <%= link_to event_path(user_event.event) do%>
-              <img src="<%= user_event.event.photo_url%>" alt="">
-            <% end %>
-          </div>
-        <% end %>
+      <!-- Slider main container -->
+      <div data-controller="swiper" class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <% @user_events.each do |user_event| %>
+            <div class="swiper-slide">
+              <%= link_to event_path(user_event.event) do%>
+                <img src="<%= user_event.event.photo_url%>" alt="">
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
 
 
 
-  <div class="container-genre">
-  <div class="card-genre">
-    <h1 class="title-friend">FRIENDS</h1>
-      <% if @friendships.empty? %>
-        <p class="friend-name">no friends</p>
-      <% else %>
-        <% @friendships.each do |friendship| %>
-          <p class="friend-name"><%= friendship.other_user(current_user).name %> <%= link_to "remove", friendship_path(friendship), data: { turbo_method: :delete } %></p>
+    <div class="container-genre">
+    <div class="card-genre">
+      <h1 class="title-friend">FRIENDS</h1>
+        <% if @friendships.empty? %>
+          <p class="friend-name">no friends</p>
+        <% else %>
+          <% @friendships.each do |friendship| %>
+            <p class="friend-name"><%= friendship.other_user(current_user).name %> <%= link_to "remove", friendship_path(friendship), data: { turbo_method: :delete } %></p>
+          <% end %>
         <% end %>
-      <% end %>
-      <%# <div class= "avatar-index-first-row">
-        <img src="https://ca.slack-edge.com/T02NE0241-U03BXKTHCEM-560844b1dce0-512" class="card-pop avatar" />
-        <img src="https://ca.slack-edge.com/T02NE0241-U02KV2K84JJ-268a6271db86-512" class="card-pop avatar" />
-        <img src="https://ca.slack-edge.com/T02NE0241-U03BLPQSHA6-f3eb46882dab-512" class="card-pop avatar" />
-        <img src="https://ca.slack-edge.com/T02NE0241-U03BKK2DNLB-843021afbdb3-512" class="card-pop avatar" />
+        <%# <div class= "avatar-index-first-row">
+          <img src="https://ca.slack-edge.com/T02NE0241-U03BXKTHCEM-560844b1dce0-512" class="card-pop avatar" />
+          <img src="https://ca.slack-edge.com/T02NE0241-U02KV2K84JJ-268a6271db86-512" class="card-pop avatar" />
+          <img src="https://ca.slack-edge.com/T02NE0241-U03BLPQSHA6-f3eb46882dab-512" class="card-pop avatar" />
+          <img src="https://ca.slack-edge.com/T02NE0241-U03BKK2DNLB-843021afbdb3-512" class="card-pop avatar" />
+        </div>
+        <div class="avatar-index-second-row">
+          <img src="https://ca.slack-edge.com/T02NE0241-U03BCJ6HNP8-374030a92114-512" class="card-pop avatar" />
+          <img src="https://ca.slack-edge.com/T02NE0241-U03Q1L5102V-8f5bffc920e3-512" class="card-pop avatar" />
+          <img src="https://ca.slack-edge.com/T02NE0241-U045Q0RPL0K-111a908ca1f8-512" class="card-pop avatar" />
+          <img src="https://ca.slack-edge.com/T02NE0241-U03PRDJEMNG-c649a4eb21a3-512" class="card-pop avatar" />
+        </div> %>
       </div>
-      <div class="avatar-index-second-row">
-        <img src="https://ca.slack-edge.com/T02NE0241-U03BCJ6HNP8-374030a92114-512" class="card-pop avatar" />
-        <img src="https://ca.slack-edge.com/T02NE0241-U03Q1L5102V-8f5bffc920e3-512" class="card-pop avatar" />
-        <img src="https://ca.slack-edge.com/T02NE0241-U045Q0RPL0K-111a908ca1f8-512" class="card-pop avatar" />
-        <img src="https://ca.slack-edge.com/T02NE0241-U03PRDJEMNG-c649a4eb21a3-512" class="card-pop avatar" />
-      </div> %>
     </div>
   </div>
 </div>
