@@ -6,8 +6,6 @@ ruby "3.1.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
-#Cloudinary
-gem "cloudinary"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -56,6 +54,9 @@ gem 'bootstrap-datepicker-rails'
 
 # Cludinary security
 gem "dotenv-rails", groups: [:development, :test]
+
+#Cloudinary
+gem "cloudinary"
 
 #Adding Maps
 gem "geocoder"
