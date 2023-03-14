@@ -59,7 +59,7 @@ event3 = Event.create(
   artist: "Sigala",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/8635734/huge_avatar",
   description: "Venue Electric Brixton  Town Hall Parade, London SW2 1RJ  London, UK 0207 274 2290 electricbrixton.uk.com/ 49 upcoming concerts Capacity: 1,500  Additional details Price: £24.50 Doors open: 19:00 For fans of: Electronic and Pop.",
-  genre: "Electronic and Pop"
+  genre: "Electronic"
 )
 
 event4 = Event.create(
@@ -69,7 +69,7 @@ event4 = Event.create(
   artist: "Jorge Aragão",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/462790/huge_avatar",
   description: "Islington Assembly Hall  Upper Street, Islington, London N1 2UD  London, UK 020 7527 8900  www.islingtonassemblyhall.co.uk  40 upcoming concerts Capacity: 800  Additional detail  Doors open: 19:00",
-  genre: "Samba and Pagode"
+  genre: "Samba"
 )
 
 event5 = Event.create(
@@ -79,7 +79,7 @@ event5 = Event.create(
   artist: "Malaa",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/8673349/huge_avatar",
   description: "Venue Werkhaus  85 Brick Lane  E1 6QL  London, UK  www.werkhauslondon.com/ 4 upcoming concerts Capacity: 300",
-  genre: "Dance & Electronic"
+  genre: "Electronic"
 )
 
 # New Events
@@ -90,7 +90,7 @@ event6 = Event.create(
   artist: "Elton John",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/371163/huge_avatar",
   description: "Sunday April 02, 2023 Elton John  The O2, London Tuesday April 04, 2023 Elton John The O2, London  Saturday April 08, 2023  Elton John  The O2, London  Sunday April 09, 2023  Elton John  The O2, London  Wednesday April 12, 2023  Elton John  The O2, London  Thursday April 13, 2023  Elton John  The O2, London  Sunday April 16, 2023  Elton John  The O2, London  Monday April 17, 2023  Elton John  The O2, London  Tuesday May 30, 2023  Elton John  The O2, London For fans of: Rock and Pop.",
-  genre: "Rock and Pop"
+  genre: "Rock"
 )
 
 event7 = Event.create(
@@ -100,7 +100,7 @@ event7 = Event.create(
   artist: "The Zombies",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/2512/huge_avatar",
   description: "Friday April 07, 2023 The Zombies Trading Boundaries, Sheffield Green, Uckfield  Saturday April 08, 2023  The Zombies  Trading Boundaries, Sheffield Green, Uckfield  Sunday April 09, 2023  The Zombies  Trading Boundaries, Sheffield Green, Uckfield Saturday April 15, 2023  The Zombies  Apex, Bury Saint Edmunds  Wednesday April 19, 2023  The Zombies  Spa Pavilion, Felixstowe  Thursday April 20, 2023  The Zombies  Eric Morecambe Centre, Harpenden  Friday April 21, 2023  The Zombies  Eric Morecambe Centre, Harpenden  For fans of: Folk & Blues, Indie & Alt, Rock, and Pop.",
-  genre: "Rock, and Pop"
+  genre: "Rock"
 )
 
 event8 = Event.create(
@@ -110,7 +110,7 @@ event8 = Event.create(
   artist: "John Legend",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/421338/huge_avatar",
   description: "Upcoming concerts for John Legend Thursday April 06, 2023  John Legend  Venue  Royal Albert Hall  Kensington Gore  SW7 2AP  London, UK  0845 401 5045  www.royalalberthall.com/  62 upcoming concerts Capacity: 5,544  Additional details Price: £40.00 – £120.00  Doors open: 19:00 For fans of: R&B, Funk & Soul, and Pop.",
-  genre: "R&B, Funk & Soul, and Pop"
+  genre: "Pop"
 )
 
 event9 = Event.create(
@@ -120,7 +120,7 @@ event9 = Event.create(
   artist: "Hozier, James Bay, Nilüfer Yanya, Marcus Mumford, Dermot Kennedy, and Anna Calvi",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/7104269/huge_avatar",
   description: "Venue Royal Albert Hall Kensington Gore  SW7 2AP  London, UK  0845 401 5045  www.royalalberthall.com/  62 upcoming concerts  Capacity: 5,544  Additional details  Doors open: 17:30 A special one off charity fundraiser at the Royal Albert Hall to raise money for War Child and Turkey Mozaik who are raising crucial funds to support those affected by the recent earthquakes in Turkey and Syria.  For fans of: Folk & Blues, Indie & Alt, Funk & Soul, Pop, and Rock.",
-  genre: "Folk & Blues, Indie & Alt, Funk & Soul, Pop, and Rock"
+  genre: "Blues"
 )
 
 event10 = Event.create(
@@ -130,7 +130,7 @@ event10 = Event.create(
   artist: "Paramore",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/127596/huge_avatar",
   description: "Upcoming concerts for Paramore Thursday April 20, 2023 Paramore  The O2  Peninsula Square  SE10 0DX  London, UK  020 8463 2000  www.theO2.co.uk  117 upcoming concerts  Capacity: 20,000  Additional details  Price: £42.50 – £85.00  Doors open: 18:30 For fans of: Rock, Pop, and Indie & Alt.",
-  genre: "Rock, Pop, and Indie & Alt"
+  genre: "Rock"
 )
 
 event11 = Event.create(
@@ -140,7 +140,7 @@ event11 = Event.create(
   artist: "Loyle Carner",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/7507524/huge_avatar",
   description: "Upcoming concerts for Loyle Carner Thursday March 16, 2023  Loyle Carner  OVO Arena Wembley, London  Wednesday August 23, 2023  Imagine Dragons, Billie Eilish, Foals, and Trippie Redd  Reading Festival Weekend & Early Entry 2023, Reading Eventim Apollo  Apollo Hammersmith, 45 Queen Caroline Street, Hammersmith, London  W6 9QH  London, UK  0844 249 4300  www.eventimapollo.com  79 upcoming concerts  Capacity: 5,100  Additional details  Price: £40.00  Doors open: 19:00 For fans of: Hip-Hop, R&B, and Funk & Soul.",
-  genre: "Hip-Hop, R&B, and Funk & Soul"
+  genre: "R&B"
 )
 
 event12 = Event.create(
@@ -150,7 +150,7 @@ event12 = Event.create(
   artist: "Snoop Dogg and Warren G",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/292668/huge_avatar",
   description: "Venue The O2 Peninsula Square SE10 0DX  London, UK  020 8463 2000 www.theO2.co.uk  117 upcoming concerts  Capacity: 20,000  Additional details  Price: £45.50 – £68.50  Doors open: 18:00 For fans of: Hip-Hop and Funk & Soul.",
-  genre: "Hip-Hop and Funk & Soul"
+  genre: "Hip-Hop"
 )
 
 event13 = Event.create(
@@ -160,7 +160,7 @@ event13 = Event.create(
   artist: "Kelela",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/6039679/huge_avatar",
   description: "Upcoming concerts for Kelela Saturday August 19, 2023  Bonobo, SBTRKT, Aphex Twin, and Moderat  Field Day 2023,  HERE at Outernet  Charing Cross Road  WC2H 8LH  London, UK  35 upcoming concerts  Capacity: 2,000  Additional details  Price: £26.50  Doors open: 19:00 For fans of: Pop, Indie & Alt, Hip-Hop, R&B, and Funk & Soul.",
-  genre: "Pop, Indie & Alt, Hip-Hop, R&B, and Funk & Soul"
+  genre: "R&B"
 )
 
 event14 = Event.create(
@@ -170,7 +170,7 @@ event14 = Event.create(
   artist: "Post Malone",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/8508053/huge_avatar",
   description: "Thursday May 04, 2023 Post Malone  The O2, London  Sunday May 07, 2023 Post Malone and Rae Sremmurd  The O2  Peninsula Square  SE10 0DX  London, UK  020 8463 2000  www.theO2.co.uk  117 upcoming concerts Capacity: 20,000  Additional details Price: £50.00 – £425.00  Doors open: 18:30 Tour name: Twelve Carat Tour For fans of: Hip-Hop and Pop.",
-  genre: "Hip-Hop and Pop"
+  genre: "Pop"
 )
 
 event15 = Event.create(
@@ -180,7 +180,7 @@ event15 = Event.create(
   artist: "Limp Bizkit",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/468296/huge_avatar",
   description: "Upcoming concerts for Limp Bizkit  Monday April 17, 2023  Limp Bizkit  O2 Academy Brixton  211 Stockwell Road SW9 9SL  London, UK  020 7771 3000  academymusicgroup.com/o2academybrixton/  27 upcoming concerts  Capacity: 4,921  Additional details  Price: £45.00  Doors open: 19:00 For fans of: Rock, Metal, and Hip-Hop.",
-  genre: "Rock, Metal, and Hip-Hop"
+  genre: "Rock"
 )
 
 event16 = Event.create(
@@ -210,7 +210,7 @@ event18 = Event.create(
   artist: "Dom Dolla",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/8283518/huge_avatar",
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!",
-  genre: "Dance & Electronic"
+  genre: "Electronic"
 )
 
 event19 = Event.create(
@@ -220,7 +220,7 @@ event19 = Event.create(
   artist: "Dread Mar I",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/361911/huge_avatar",
   description: "Venue Electric Brixton  Town Hall Parade, London  SW2 1RJ  London, UK  0207 274 2290  electricbrixton.uk.com/  49 upcoming concerts  Capacity: 1,500  Additional details  Doors open: 19:00  For fans of: Reggae and Latin.",
-  genre: "Reggae and Latin"
+  genre: "Reggae"
 )
 
 event20 = Event.create(
@@ -240,7 +240,7 @@ event21 = Event.create(
   artist: "Tori Amos",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/453601/huge_avatar",
   description: "Venue Royal Albert Hall Kensington Gore SW7 2AP  London, UK  0845 401 5045  www.royalalberthall.com/  62 upcoming concerts  Capacity: 5,544  Additional details Price: £29.50 – £85.00  Doors open: 18:45  For fans of: Folk & Blues, Rock, Indie & Alt, and Pop.",
-  genre: "Folk & Blues, Rock, Indie & Alt, and Pop"
+  genre: "Blues"
 )
 
 event22 = Event.create(
@@ -250,7 +250,7 @@ event22 = Event.create(
   artist: "Aldous Harding",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/5530488/huge_avatar",
   description: "Barbican Centre Silk Street EC2Y 8DS London, UK  020 7638 4141  www.barbican.org.uk  Capacity: 1,949  Additional details  Doors open: 19:30 For fans of: Indie & Alt and Folk & Blues.",
-  genre: "Indie & Alt and Folk & Blues"
+  genre: "Blues"
 )
 
 event23 = Event.create(
@@ -260,7 +260,7 @@ event23 = Event.create(
   artist: "Heatwave, Ammara, and JKriv",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/517644/huge_avatar",
   description: "Venue Brixton Jamm  261 Brixton Road  SW9 6LH  London, UK  +44 (0)20 7274 5537  www.brixtonjamm.org/  12 upcoming concerts  Capacity: 550  Additional details  Price: £6.00 – £15.00Doors open: 18:00  For fans of: Funk & Soul, Jazz, and R&B.",
-  genre: "Funk & Soul, Jazz, and R&B"
+  genre: "R&B"
 )
 
 event24 = Event.create(
@@ -280,7 +280,7 @@ event25 = Event.create(
   artist: "Duran Duran",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/427500/huge_avatar",
   description: "Upcoming concerts for Duran Duran Tuesday May 02, 2023 Duran Duran The O2, London Capacity: 20,000  Additional details Price: £7.00 – £125.00 Doors open: 18:30 For fans of: Pop and Rock.",
-  genre: "Pop and Rock"
+  genre: "Pop"
 )
 
 event26 = Event.create(
@@ -290,7 +290,7 @@ event26 = Event.create(
   artist: "Jorge Drexler",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/416867/huge_avatar",
   description: "Welcome to our exciting music event, where you'll experience the joy of live music! Our event features an amazing lineup of talented musicians who will take the stage and captivate you with their incredible performances. From soulful ballads to upbeat pop tunes, our event has something for everyone. Our state-of-the-art sound system and lighting will transport you to another world as you immerse yourself in the rhythm and energy of the music. Whether you're a die-hard fan of a particular artist or simply looking to discover new sounds, our music event promises to be an unforgettable experience that you'll cherish for years to come. So come join us, let your hair down, and get ready to dance the night away!",
-  genre: "Spanish Rock"
+  genre: "Rock"
 )
 
 event27 = Event.create(
@@ -300,7 +300,7 @@ event27 = Event.create(
   artist: "Avril Lavigne",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/386779/huge_avatar",
   description: "Venue O2 Academy Brixton 211 Stockwell Road  SW9 9SL  London, UK  020 7771 3000 academymusicgroup.com/o2academybrixton/  27 upcoming concerts  Capacity: 4,921  Additional details  Price: £38.50  Doors open: 19:00 Tour name: Love Sux Tour Rescheduled show from:  April 1st, 2020  February 28, 2021 March 27, 2022  Original tickets remain valid for the new date. For fans of: Rock, Pop, and Indie & Alt.",
-  genre: "Rock, Pop, and Indie & Alt"
+  genre: "Rock"
 )
 
 event28 = Event.create(
@@ -310,7 +310,7 @@ event28 = Event.create(
   artist: "Joaquin Sabina",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/490667/huge_avatar",
   description: "Details Doors open: 20:30 Tour name: Contra todo pronóstico  The Spanish singer-songwriter Joaquín Sabina returns and announces his comeback on the stages with a world tour.  Essential and emotional massive concerts in which they will review the best of his long-lived musical work, universal hymns adhered to the genetics of popular culture of several generations, together with new unpublished songs.  For fans of: Folk & Blues, Pop, and Rock.",
-  genre: "Folk & Blues, Pop, and Rock"
+  genre: "Pop"
 )
 
 event29 = Event.create(
@@ -320,7 +320,7 @@ event29 = Event.create(
   artist: "Alex G, Osees, Oneohtrix Point Never, Molchat Doma, Caroline Polachek, A Place To Bury Strangers, Daniel Avery, Black Country, New Road, Joy Orbison, Viagra Boys",
   photo_url: "https://images.sk-static.com/images/media/profile_images/events/40671570/huge_avatar",
   description: "Venue Brockwell Park  Dulwich Road  SE24 0PA  Herne Hill, UK  2 upcoming concerts  Additional details  Doors open: 12:00 For fans of: Indie & Alt, Rock, Folk & Blues, Hip-Hop, Pop, and Electronic.",
-  genre: "Indie & Alt, Rock, Folk & Blues, Hip-Hop, Pop, and Electronic"
+  genre: "Blues"
 )
 
 event30 = Event.create(
@@ -330,7 +330,7 @@ event30 = Event.create(
   artist: "Morrissey",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/417787/huge_avatar",
   description: "Eventim Apollo Apollo Hammersmith, 45 Queen Caroline Street, Hammersmith, London  W6 9QH  London, UK  0844 249 4300  www.eventimapollo.com  Capacity: 5,100  Additional details  Price: £45.00 – £90.00  Doors open: 19:00 For fans of: Indie & Alt and Rock.",
-  genre: "Indie & Alt and Rock"
+  genre: "Rock"
 )
 
 

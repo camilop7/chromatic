@@ -7,6 +7,12 @@ class EventsController < ApplicationController
     @events = Event.all
     @events = @events.where("address ILIKE ?", "%#{params[:city]}%") if params[:city].present?
     @events = @events.where("date = ?", "%#{params[:date]}%") if params[:date].present?
+
+    if params[:genre].present?
+      @events = Event.where(genre: params[:genre])
+    else
+      @events = Event.all
+    end
   end
 
   def show
