@@ -12,14 +12,15 @@
   // padding-bottom: 20px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .title-friend {
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Ubuntu', sans-serif;
   padding-bottom: 15px;
   color: white;
+  padding-left: 34%;
 }
 
 .friend-name {
@@ -37,10 +38,7 @@
 
 }
 
-.backtick {
-  color: rgb(234, 12, 12);
 
-}
 
 .fa-angle-left::before {
   content: "\f104";
@@ -62,3 +60,9 @@
   padding-right: 8%;
 
 }
+
+.avatar-header-profile{
+  border-radius: 50%;
+  width: 125px;
+}
+

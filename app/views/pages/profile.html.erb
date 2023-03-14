@@ -11,12 +11,12 @@
 
 
   <div class="profile-hello" >
-    <div class="avatar">
-      <% if current_user.photo.attached? %>
-        <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
-      <% else %>
-        <%= image_tag "classic.jpg" %>
-      <% end %>
+    <div class="avatar-profile">
+    <% if current_user.photo.attached? %>
+      <%= cl_image_tag current_user.photo.key, class: 'avatar-header-profile', crop: :fill %>
+    <% else %>
+      <%= image_tag "classic.jpg" %>
+    <% end %>
     </div>
     <h1 class="title-profile-name">Hello <%= current_user.name %></h1>
   </div>
@@ -45,15 +45,15 @@
 
 
 
-    <div class="container-genre">
-    <div class="card-genre">
-      <h1 class="title-friend">FRIENDS</h1>
-        <% if @friendships.empty? %>
-          <p class="friend-name">no friends</p>
-        <% else %>
-          <% @friendships.each do |friendship| %>
-            <p class="friend-name"><%= friendship.other_user(current_user).name %> <%= link_to "remove", friendship_path(friendship), data: { turbo_method: :delete } %></p>
-          <% end %>
+
+  <div class="container-genre">
+  <div class="card-genre">
+    <h1 class="title-friend">FRIENDS</h1>
+      <% if @friendships.empty? %>
+        <p class="friend-name">no friend added</p>
+      <% else %>
+        <% @friendships.each do |friendship| %>
+          <p class="friend-name"><%= friendship.other_user(current_user).name %> <%= link_to "remove", friendship_path(friendship), data: { turbo_method: :delete } %></p>
         <% end %>
         <%# <div class= "avatar-index-first-row">
           <img src="https://ca.slack-edge.com/T02NE0241-U03BXKTHCEM-560844b1dce0-512" class="card-pop avatar" />
