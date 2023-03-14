@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "my_events", to: "pages#my_events"
   get "profile", to: "pages#profile"
   get "search_events", to: "pages#search_events"
+  get '/events/genre/:genre', to: 'events#index', as: 'events_by_genre'
 
 
   resources :events, only: [:index, :show, :create, :destroy] do
