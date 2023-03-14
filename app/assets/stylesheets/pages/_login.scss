@@ -5,10 +5,39 @@
   font-weight: 700;
   font-size: 24px;
   padding: 20px 20px 0px 20px;
+  margin-bottom: -16px;
+  margin-top: 179px;
 }
 
-.login-container {
+.login-container-login {
   margin: 10px;
+  margin-top: 70px;
+  background-color: black;
+  border-radius: 5%;
+  padding: 20px;
+}
+
+.login-container-signup{
+  margin: 10px;
+  background-color: black;
+  border-radius: 5%;
+  padding: 20px;
+}
+
+.login-title-signup {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 20px 20px 0px 20px;
+  margin-bottom: 3px;
+  margin-top: 106px;
+}
+
+.login-container-forgot-password {
+  margin: 10px;
+  margin-top: 70px;
   background-color: black;
   border-radius: 5%;
   padding: 20px;
@@ -27,4 +56,20 @@
   font-size: 16px;
   color: white;
   margin-bottom: 10px;
+  padding-bottom: 8px;
+}
+
+.signup-forgot-links {
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.forgotyourpassword-forgot-links {
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.login-button {
+  padding-left: 10px;
+  padding-top: 20px;
 }
