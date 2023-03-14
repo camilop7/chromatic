@@ -11,7 +11,7 @@
       <%= f.input :email,
                   required: true,
                   input_html: { autocomplete: "email" }%>
-      <%= f.input :avatar_img,
+      <%= f.input :photo, as: :file,
                   required: true,
                   input_html: { autocomplete: "Add Photo" }%>
       <%= f.input :password,
