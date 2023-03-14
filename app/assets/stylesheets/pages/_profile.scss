@@ -15,10 +15,15 @@
   font-size: 20px;
 }
 
-.title-friend{
+.title-friend {
   font-size: 25px;
   font-family: 'Ubuntu', sans-serif;
   padding-bottom: 15px;
+  color: white;
+}
+
+.friend-name {
+  color: white;
 }
 
 .title-events {
@@ -39,7 +44,6 @@
 
 .fa-angle-left::before {
   content: "\f104";
-  padding-left: 30px;
   font-size: 25px;
   color: white;
 }
@@ -49,4 +53,13 @@
 
 }
 
+
+.back-to-index{
+  justify-content: space-between;
+  margin-top: 8%;
+  margin-bottom: 10%;
+  padding-left: 8% ;
+  padding-right: 8%;
+
+}
 

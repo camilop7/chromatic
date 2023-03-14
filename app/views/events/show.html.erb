@@ -41,7 +41,7 @@
         <div>
 
           <% if @user_event %>
-            <%= link_to "remove", user_event_path(@user_event), data: { turbo_method: :delete } %>
+            <%= link_to "Remove Event", user_event_path(@user_event), data: { turbo_method: :delete }, class:"remove-event-show-event-page" %>
           <% else %>
             <%= form_tag(event_user_events_path(@event), method: :post) do %>
               <%= hidden_field_tag :trigger_method, true %>
