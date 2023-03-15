@@ -14,10 +14,11 @@ puts 'destroying all the tables..'
 puts '-----------------------'
 puts '-----------------------'
 puts '-----------------------'
+UserEvent.destroy_all
 Message.destroy_all
+User.destroy_all
 Event.destroy_all
 Chatroom.destroy_all
-User.destroy_all
 
 puts 'creating new user....'
 
