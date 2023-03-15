@@ -53,7 +53,13 @@
         <p class="friend-name">no friend added</p>
       <% else %>
         <% @friendships.each do |friendship| %>
-          <p class="friend-name"><%= friendship.other_user(current_user).name %> <%= link_to "remove", friendship_path(friendship), data: { turbo_method: :delete } %></p>
+          <div class="friendsprofile">
+           <%= cl_image_tag friendship.other_user(current_user).photo.key, class: 'avatar-friend-profile', crop: :fill %>
+           <p class="friend-name"><%= friendship.other_user(current_user).name %></p>
+           <%= link_to friendship_path(friendship), data: { turbo_method: :delete } do %>
+            <i class="fa-solid fa-user-minus"></i>
+           <% end %>
+          </div>
         <% end %>
         <%# <div class= "avatar-index-first-row">
           <img src="https://ca.slack-edge.com/T02NE0241-U03BXKTHCEM-560844b1dce0-512" class="card-pop avatar" />
