@@ -2,13 +2,13 @@
 
   <%= link_to search_events_path, class: 'nav-event d-flex justify-content-center flex-column text-decoration-none text-white' do %>
     <button class="button-search"type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-    <p class="navbar-p">Search</p>
+    <p class="navbar-p"></p>
   <% end %>
 
   <%= link_to profile_path, class: 'nav-profile d-flex justify-content-center flex-column text-decoration-none text-white' do %>
-    <%= cl_image_tag current_user.photo.key, class: "avatar", alt: 'avatar' %>
+    <%= cl_image_tag current_user.photo.key, class: "avatar-navbar", alt: 'avatar' %>
     <button class="button-profile"type="button"></button>
-    <p class="navbar-p">Profile</p>
+    <p class="navbar-p"></p>
   <% end %>
 
 </div>
