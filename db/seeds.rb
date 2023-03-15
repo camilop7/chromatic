@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require "faker"
+require "open-uri"
 
 # Users
 
@@ -22,10 +23,55 @@ Chatroom.destroy_all
 
 puts 'creating new user....'
 
-emilie = User.create(email: "emilie@gmail.com", password: "123456", name: "Timmy C", avatar_img: "https://upload.wikimedia.org/wikipedia/commons/e/e1/%D0%A2%D0%B8%D0%BC_%D0%9A%D1%83%D0%BA_%2802-09-2021%29.jpg")
-jose = User.create(email: "jose@gmail.com", password: "123456", name: "Bill Gates", avatar_img: "https://imageio.forbes.com/specials-images/imageserve/62d599ede3ff49f348f9b9b4/0x0.jpg?format=jpg&crop=821,821,x155,y340,safe&height=416&width=416&fit=bounds")
-alex = User.create(email: "alex@gmail.com", password: "123456", name: "J Bezos", avatar_img: "https://imageio.forbes.com/specials-images/imageserve/5bb22ae84bbe6f67d2e82e05/0x0.jpg?format=jpg&crop=1012,1013,x627,y129,safe&height=416&width=416&fit=bounds")
-camilo = User.create(email: "camilo@camilo.com", password: "123456", name: "Elon the Great", avatar_img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg")
+def take_url()
+
+end
+
+owners = [
+  emilie = { name: "emilie", photo: "https://upload.wikimedia.org/wikipedia/commons/e/e1/%D0%A2%D0%B8%D0%BC_%D0%9A%D1%83%D0%BA_%2802-09-2021%29.jpg" },
+  jose = { name: "jose", photo: "https://imageio.forbes.com/specials-images/imageserve/62d599ede3ff49f348f9b9b4/0x0.jpg?format=jpg&crop=821,821,x155,y340,safe&height=416&width=416&fit=bounds" },
+  alex = { name: "alex", photo: "https://imageio.forbes.com/specials-images/imageserve/5bb22ae84bbe6f67d2e82e05/0x0.jpg?format=jpg&crop=1012,1013,x627,y129,safe&height=416&width=416&fit=bounds" },
+  camilo = { name: "camilo", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg" },
+]
+owners.each do |owner|
+  photo_url = URI.open(owner[:photo])
+  name = owner[:name]
+  new_user = User.new(
+    email: name + '@gmail.com',
+    name: name,
+    password: '123456',
+  )
+  new_user.photo.attach(io: photo_url, filename:  "#{name}.png", content_type: "image/png")
+  new_user.save!
+end
+
+# users = {
+#   "emilie" =>  "https://upload.wikimedia.org/wikipedia/commons/e/e1/%D0%A2%D0%B8%D0%BC_%D0%9A%D1%83%D0%BA_%2802-09-2021%29.jpg",
+#   "jose" => "https://imageio.forbes.com/specials-images/imageserve/62d599ede3ff49f348f9b9b4/0x0.jpg?format=jpg&crop=821,821,x155,y340,safe&height=416&width=416&fit=bounds",
+#   "alex" => "https://imageio.forbes.com/specials-images/imageserve/5bb22ae84bbe6f67d2e82e05/0x0.jpg?format=jpg&crop=1012,1013,x627,y129,safe&height=416&width=416&fit=bounds",
+#   "camilo" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
+# }
+
+
+
+# users.each do |user, img|
+#   # puts user
+#   # puts img
+#   # puts 'new user'
+#   new_user = User.new(
+#     email: "#{user}@gmail.com",
+#     password: "123456",
+#     name: user
+#   )
+#   file = URI.open(img)
+#   new_user.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+#   new_user.save
+# end
+
+# file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
+# article = Article.new(title: "NES", body: "A great console")
+# article.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# article.save
 
 puts "Created #{User.count} users"
 
@@ -521,22 +567,22 @@ puts "Created #{Chatroom.count} chatrooms"
 puts 'creating new user events....'
 
 UserEvent.create(
-  user_id: jose.id,
+  user_id: User.find(2).id,
   event_id: event5.id
 )
 
 UserEvent.create(
-  user_id: emilie.id,
+  user_id: User.find(1).id,
   event_id: event4.id
 )
 
 UserEvent.create(
-  user_id: alex.id,
+  user_id: User.find(3).id,
   event_id: event3.id
 )
 
 UserEvent.create(
-  user_id: camilo.id,
+  user_id: User.find(4).id,
   event_id: event3.id
 )
 
