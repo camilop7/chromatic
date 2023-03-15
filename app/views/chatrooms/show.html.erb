@@ -26,7 +26,7 @@
           <ul class ="contributer-box">
             <% @all_the_people.each do |person| %>
               <li class="person-contributer-box">
-                <%= cl_image_tag person.photo.key, height: 5, width: 5, crop: :fill %>
+                <%= cl_image_tag person.photo.key, height: 40, width: 40, crop: :fill %>
                 <%= person.name %>
                 <% if person.is_a_friend?(current_user) %>
                   <p><%= person.name %> is already a friend</p>

@@ -15,8 +15,10 @@
   max-width:100%;
   max-height:100%;
   border-radius: 20px;
-  border-style: solid;
-  border-color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  width: 99%;
+
 }
 
 //.background_container {
@@ -25,14 +27,13 @@
 
 .event-card-detail {
   background-color: black;
-  margin: 20px;
-  max-width:100%;
-  max-height:100%;
-  border-radius: 20px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-style: solid;
-  border-color: white;
+	margin: 20px;
+ 	max-width: 100%;
+ 	max-height: 100%;
+ 	border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 
 .event-card-detail-name {
   font-family: 'Ubuntu', sans-serif;
