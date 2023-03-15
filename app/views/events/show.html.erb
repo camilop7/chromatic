@@ -18,9 +18,13 @@
     </div>
 
     <div class="event_card_text">
-      <p> <strong>Venue:</strong> <%= @event.address %></p>
-      <p> <strong>Date:</strong> <%= @event.date.strftime('%d-%m-%Y') %></p>
-      <p> <strong>Time:</strong> <%= @event.date.strftime("%I:%m %p") %></p>
+      <%= content_tag :i, "", class: "fa light fa-location-dot" %>  <%= @event.address%>
+      <br>
+      <br>
+      <%= content_tag :i, "", class: "fa light fa-calendar" %>  <%= @event.date.strftime('%d-%m-%Y') %>
+      <br>
+      <br>
+      <%= content_tag :i, "", class: "fa light fa-clock" %>  <%= @event.date.strftime("%I:%m %p") %>
     </div>
 
     <div class="line-up">
@@ -51,7 +55,7 @@
         <div>
         <div class="top-button-interested">
           <%= link_to event_chatroom_path(@event, @event.chatroom) do %>
-            <button class="interested_button">Chatroom</button>
+            <button class="interested_button">Join Chatroom</button>
           <% end %>
         </div>
       </div>
