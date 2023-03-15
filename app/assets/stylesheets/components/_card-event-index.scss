@@ -4,11 +4,11 @@
   background-color: rgba(255, 255, 255, 0.987);
 	border-radius: 16px;
 	overflow: hidden;
-	margin: 10%;
-	border-color: black;
-	border-style: solid;
+	margin: 6%;
+	// border-color: black;
+	// border-style: solid;
 	width: 93%;
- 	margin-left: 15px;
+ 	margin-left: 14px;
  	margin-bottom: 40px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -19,12 +19,12 @@
 .card-title-index{
 
   font-family: 'Ubuntu', sans-serif;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: bold;
 	color: black;
 	display: flex;
 	justify-content: left;
-  padding: 10px;
+  padding: 19px;
 
 
 }
@@ -48,15 +48,15 @@
   color: black;
   display: flex;
   justify-content: right;
-  padding: 10px;
+  padding: 20px;
+
 }
 
 
 .card-text-index {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 27px;
-  padding-top: 8px;
+
 }
 
 .no-decoration {
