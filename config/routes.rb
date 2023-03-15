@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   end
   resources :user_events, only: :destroy
   resources :friendships, only: [:create, :destroy]
+  resources :users, only: :show
 end
