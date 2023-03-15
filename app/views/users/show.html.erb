@@ -12,13 +12,13 @@
 
   <div class="profile-hello" >
     <div class="avatar-profile">
-    <% if current_user.photo.attached? %>
-      <%= cl_image_tag current_user.photo.key, class: 'avatar-header-profile', crop: :fill %>
+    <% if @user.photo.attached? %>
+      <%= cl_image_tag @user.photo.key, class: 'avatar-header-profile', crop: :fill %>
     <% else %>
       <%= image_tag "classic.jpg" %>
     <% end %>
     </div>
-    <h1 class="title-profile-name">Hello <%= current_user.name %></h1>
+    <h1 class="title-profile-name">Hello <%= @user.name %></h1>
   </div>
 
 
@@ -55,8 +55,8 @@
         <% @friendships.each do |friendship| %>
         <%= link_to user_path(friendship.user) do %>
           <div class="friendsprofile">
-          <%= cl_image_tag friendship.other_user(current_user).photo.key, class: 'avatar-friend-profile', crop: :fill %>
-          <p class="friend-name"><%= friendship.other_user(current_user).name %></p>
+          <%= cl_image_tag friendship.other_user(@user).photo.key, class: 'avatar-friend-profile', crop: :fill %>
+          <p class="friend-name"><%= friendship.other_user(@user).name %></p>
           <%= link_to friendship_path(friendship), data: { turbo_method: :delete } do %>
           <i class="fa-solid fa-user-minus"></i>
           <% end %>
