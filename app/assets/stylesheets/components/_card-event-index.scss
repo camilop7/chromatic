@@ -68,3 +68,15 @@
   margin-bottom: 25%;
   padding-top: -30%;
 }
+
+
+.date{
+  width: 100%;
+  input[type=date]{
+    min-width: 100%;
+  }
+}
+
+.content-container{
+  width: 100%;
+}
