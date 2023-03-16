@@ -23,6 +23,11 @@ class FriendshipsController < ApplicationController
     redirect_to profile_path
   end
 
+  def show
+    @friend = User.find(params[:id])
+  end
+
+
   private
 
   def friendship_params
