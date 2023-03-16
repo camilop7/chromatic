@@ -3,8 +3,8 @@ import { initVideoClient } from "./AgoraRTC_N-4.16.0"
 export const initVideo = () => {
   initVideoClient()
 
-  const APP_ID = "c93f7fb31d0a4a51a7ced5b832be2450"
-  const TOKEN = "007eJxTYGC/9UJ72Zm5h1uvfli71LNhAUfLw5oZ2cpT6+5E+YfY2RcpMCRbGqeZpyUZG6YYJJokmhommienppgmWRgbJaUamZgabH0olNIQyMgwRT2WhZEBAkF8FobcxMw8BgYAzbsggQ=="
+  const APP_ID = "dc4b3667210d4f2f97658be7f9953988"
+  const TOKEN = "007eJxTYGiUDxbfeq9jomfHPBPnJ/N0wgNS16z7cmfZc/sFQgmFOhcUGFKSTZKMzczMjQwNUkzSjNIszc1MLZJSzdMsLU2NLS0s6h1FUhoCGRk+HJvJxMgAgSA+C0NuYmYeAwMAPhcfPA=="
   const CHANNEL = "main"
 
   const client = AgoraRTC.createClient({mode:'rtc', codec:'vp8'})
