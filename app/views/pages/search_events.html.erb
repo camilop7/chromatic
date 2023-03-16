@@ -6,15 +6,13 @@
 <div class="container findevent"form id="findeventForm" action="">
     <h2 class="findeventtitle">Find Event</h2>
     <div class="content-container">
-        <%= form_with url: events_path, method: :get, class: do %>
+        <%= form_with url: events_path, method: :get, class: 'date' do %>
           <%= text_field_tag :city,
           params[:city],
           class: "form-control",
           placeholder: "Location"
           %>
-
-          <input type="date" class="date" name="date" id="date">
-
+          <%= date_field_tag :date%>
           <%= submit_tag "Start", class: "btn btn-flat btn-centre" %>
         <% end %>
     </div>

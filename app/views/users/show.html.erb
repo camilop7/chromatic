@@ -1,6 +1,7 @@
+<% content_for :meta_title, "#{@event.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_image, cl_image_path(@event.photo.key) if @event.photo.attached? %>
 
 <div class="profile-page-container">
-
 
   <div class ="back-to-index d-flex">
     <%= link_to events_path , class: "no-decoration text-white pe-2" do %>
