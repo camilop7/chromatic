@@ -4,13 +4,13 @@
 
 <div class="background-container">
 
-  <div class ="show-event-name">
-    <%= link_to events_path, class: "no-decoration text-white pe-2" do %>
-      <i class="fa-solid fa-angle-left no-decoration"></i>
+    <div class ="back-to-index d-flex">
+    <%= link_to events_path , class: "no-decoration text-white pe-2" do %>
+      <i class="fa-solid fa-angle-left backtick"></i>
     <% end %>
-    <%= @event.name %>
   </div>
-
+    <div class="event-name"><%= @event.name %>
+    </div>
 
   <div class="show-margin">
     <img src=<%= @event.photo_url %> class="show-event-banner">

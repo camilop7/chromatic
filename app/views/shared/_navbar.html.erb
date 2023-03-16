@@ -6,9 +6,12 @@
   <% end %>
 
   <%= link_to profile_path, class: 'nav-profile d-flex justify-content-center flex-column text-decoration-none text-white' do %>
-    <%= cl_image_tag current_user.photo.key, class: "avatar-navbar", alt: 'avatar' %>
+    <% if current_user.photo.attached? %>
+     <%= cl_image_tag current_user.photo.key, class: "avatar-navbar", alt: 'avatar' %>
+    <% else %>
+      <%= image_tag "user-image.jpg", class: "avatar-navbar"%>
+    <% end %>
     <button class="button-profile"type="button"></button>
     <p class="navbar-p"></p>
   <% end %>
-
 </div>

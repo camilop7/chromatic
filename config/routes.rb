@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get '/events/genre/:genre', to: 'events#index', as: 'events_by_genre'
   get '/friends/:id', to: 'friendship#show', as: 'friend'
 
-
   resources :events, only: [:index, :show, :create, :destroy] do
     resources :user_events, only: :create
     resources :chatrooms, only: :show do

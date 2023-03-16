@@ -16,11 +16,15 @@
 }
 
 .title-friend {
-  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
   font-family: 'Ubuntu', sans-serif;
-  padding-bottom: 15px;
-  color: white;
-  padding-left: 34%;
+  font-size: 30px;
+  background-image: linear-gradient(159deg, #d800ff, #ff5c5c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .friend-name {
@@ -29,10 +33,20 @@
   font-size: 20px;
 }
 
-.title-events {
-  font-size: 25px;
+.title-event {
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
+  background-image: linear-gradient(159deg, #d800ff, #ff5c5c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+
+
 
 .profile-hello{
   text-align: center;
@@ -81,4 +95,27 @@
   border-color: white;
   border-radius: 5px;
   padding: 2%;
+}
+
+.no-event{
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  padding-top: 18px;
+  font-size: 23px;
+  padding-bottom: 8px;
+}
+
+
+.container-friend{
+  padding-top: 4%;
+}
+
+.no-friend{
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  padding-top: 18px;
+  font-size: 23px;
+  padding-bottom: 8px;
 }
