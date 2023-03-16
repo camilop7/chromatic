@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "search_events", to: "pages#search_events"
   get '/events/genre/:genre', to: 'events#index', as: 'events_by_genre'
   get "videocall", to: 'pages#videocall'
+  get '/friends/:id', to: 'friendship#show', as: 'friend'
 
 
   resources :events, only: [:index, :show, :create, :destroy] do

@@ -1,0 +1,5 @@
+meta_name: "Event name"
+meta_title: "Chromatic discover live events and meet and meet new people along the way "
+meta_description: "discover music events near you"
+meta_image: "chromatic-cover.jpg" # should exist in `app/assets/images/`
+# twitter_account: "@your_twitter_account"   # required for Twitter Cards

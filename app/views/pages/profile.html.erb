@@ -15,7 +15,7 @@
     <% if current_user.photo.attached? %>
       <%= cl_image_tag current_user.photo.key, class: 'avatar-header-profile', crop: :fill %>
     <% else %>
-      <%= image_tag "classic.jpg" %>
+      <%= image_tag "user-image.jpg", class: 'avatar-header-profile' %>
     <% end %>
     </div>
     <h1 class="title-profile-name">Hello <%= current_user.name %></h1>
@@ -25,35 +25,38 @@
   <div class="container-profile-everything">
 
     <div class="container-swipping">
-      <h1 class="title-events">MY EVENTS</h1>
-
-      <!-- Slider main container -->
-      <div data-controller="swiper" class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <% @user_events.each do |user_event| %>
-            <div class="swiper-slide">
-              <%= link_to event_path(user_event.event) do%>
-                <img src="<%= user_event.event.photo_url%>" alt="">
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+        <h1 class="title-event">MY EVENTS</h1>
+        <% if @user_events.empty? %>
+          <p class="no-event"> No events added 😢</p>
+        <% else %>
+        <!-- Slider main container -->
+          <div data-controller="swiper" class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <% @user_events.each do |user_event| %>
+              <div class="swiper-slide">
+                <%= link_to event_path(user_event.event) do%>
+                  <img src="<%= user_event.event.photo_url%>" alt="">
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
-  </div>
 
 
 
-  <div class="container-genre">
-  <div class="card-genre">
+
+  <div class="container-friend">
+  <div class="card-friend">
     <h1 class="title-friend">FRIENDS</h1>
       <% if @friendships.empty? %>
-        <p class="friend-name">no friend added</p>
+        <p class="no-friend"> No friends added yet 😢</p>
       <% else %>
         <% @friendships.each do |friendship| %>
-        <%= link_to user_path(friendship.user) do %>
+        <%= link_to user_path(friendship.other_user(current_user)) do %>
           <div class="friendsprofile">
           <%= cl_image_tag friendship.other_user(current_user).photo.key, class: 'avatar-friend-profile', crop: :fill %>
           <p class="friend-name"><%= friendship.other_user(current_user).name %></p>
@@ -80,3 +83,4 @@
     </div>
   </div>
 </div>
+ </div>

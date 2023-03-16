@@ -1,4 +1,5 @@
-
+<% content_for :meta_title, "#{@event.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_image, cl_image_path(@event.photo.key) if @event.photo.attached? %>
 
 <div class="chatroom-banner">
   <%= link_to event_path(@event.id), class: "no-decoration text-white" do %>
