@@ -80,7 +80,7 @@ puts "Created #{User.count} users"
 puts 'creating new events....'
 
 event1 = Event.create(
-  name: "George Ezra and Passenger",
+  name: "George Ezra ",
   address: "The O2, London, UK SE10 0DX",
   date: '2023-03-17',
   artist: "George Ezra and Passenger",
@@ -160,17 +160,17 @@ event8 = Event.create(
   genre: "Pop"
 )
 
-event9 = Event.create(
-  name: "Hozier, James Bay, Nilüfer Yanya, Marcus Mumford, Dermot Kennedy, and Anna Calvi",
-  address: "Kensington Gore, South Kensington, London SW7 2AP",
-  date: '2023-04-15',
-  artist: "Hozier, James Bay, Nilüfer Yanya, Marcus Mumford, Dermot Kennedy, and Anna Calvi",
-  photo_url: "https://images.sk-static.com/images/media/profile_images/artists/7104269/huge_avatar",
-  description: "Venue Royal Albert Hall Kensington Gore  SW7 2AP  London, UK  0845 401 5045  www.royalalberthall.com/  62 upcoming concerts  Capacity: 5,544  Additional details  Doors open: 17:30 A special one off charity fundraiser at the Royal Albert Hall to raise money for War Child and Turkey Mozaik who are raising crucial funds to support those affected by the recent earthquakes in Turkey and Syria.  For fans of: Folk & Blues, Indie & Alt, Funk & Soul, Pop, and Rock.",
-  genre: "Blues"
-)
+# event9 = Event.create(
+#   name: "Hozier, James Bay",
+#   address: "Kensington Gore, South Kensington, London SW7 2AP",
+#   date: '2023-04-15',
+#   artist: "Hozier, James Bay, Nilüfer Yanya, Marcus Mumford, Dermot Kennedy, and Anna Calvi",
+#   photo_url: "https://images.wallpapersden.com/image/download/hozer-irish-singer-take-me-to-church-meaning_amlnaWuUmZqaraWkpJRnZWltrWdsaGc.jpg",
+#   description: "Venue Royal Albert Hall Kensington Gore  SW7 2AP  London, UK  0845 401 5045  www.royalalberthall.com/  62 upcoming concerts  Capacity: 5,544  Additional details  Doors open: 17:30 A special one off charity fundraiser at the Royal Albert Hall to raise money for War Child and Turkey Mozaik who are raising crucial funds to support those affected by the recent earthquakes in Turkey and Syria.  For fans of: Folk & Blues, Indie & Alt, Funk & Soul, Pop, and Rock.",
+#   genre: "Blues"
+# )
 
-event10 = Event.create(
+event9 = Event.create(
   name: "Paramore",
   address: "The O2, London, UK SE10 0DX",
   date: '2023-04-23',
@@ -180,7 +180,7 @@ event10 = Event.create(
   genre: "Rock"
 )
 
-event11 = Event.create(
+event10 = Event.create(
   name: "Loyle Carner",
   address: "London, UK 45 Queen Caroline St, London W6 9QH",
   date: '2023-03-15',
@@ -190,7 +190,7 @@ event11 = Event.create(
   genre: "R&B"
 )
 
-event12 = Event.create(
+event11 = Event.create(
   name: "Snoop Dogg and Warren G",
   address: "The O2, London, UK SE10 0DX",
   date: '2023-03-17',
@@ -200,7 +200,7 @@ event12 = Event.create(
   genre: "Hip-Hop"
 )
 
-event13 = Event.create(
+event12 = Event.create(
   name: "Kelela",
   address: "HERE at Outernet, London, UK Charing Cross Rd, WC2H 8LH",
   date: '2023-04-07',
@@ -210,7 +210,7 @@ event13 = Event.create(
   genre: "R&B"
 )
 
-event14 = Event.create(
+event13 = Event.create(
   name: "Post Malone",
   address: "The O2, London, UK SE10 0DX",
   date: '2023-05-06',
@@ -220,7 +220,7 @@ event14 = Event.create(
   genre: "Pop"
 )
 
-event15 = Event.create(
+event14 = Event.create(
   name: "Limp Bizkit",
   address: "Penn, Amersham, HP7 0PS",
   date: '2023-04-16',
@@ -230,7 +230,7 @@ event15 = Event.create(
   genre: "Rock"
 )
 
-event16 = Event.create(
+event15 = Event.create(
   name: "Hugel",
   address: "Penn, Amersham, HP7 0PS",
   date: '2023-04-01',
@@ -240,7 +240,7 @@ event16 = Event.create(
   genre: "Electronic"
 )
 
-event17 = Event.create(
+event16 = Event.create(
   name: "Royal Philharmonic Orchestra, Alison Jiear, and Lance Ellington",
   address: "Kensington Gore, South Kensington, London SW7 2AP",
   date: '2023-04-04',
@@ -250,7 +250,7 @@ event17 = Event.create(
   genre: "Electronic"
 )
 
-event18 = Event.create(
+event17 = Event.create(
   name: "Dom Dolla",
   address: "418 Brixton Rd, London SW9 7AY",
   date: '2023-04-09',
@@ -260,7 +260,7 @@ event18 = Event.create(
   genre: "Electronic"
 )
 
-event19 = Event.create(
+event18 = Event.create(
   name: "Dread Mar I",
   address: "418 Brixton Rd, London SW9 7AY",
   date: '2023-04-09',
@@ -270,7 +270,7 @@ event19 = Event.create(
   genre: "Reggae"
 )
 
-event20 = Event.create(
+event19 = Event.create(
   name: "New Regency Orchestra and La Linea",
   address: "8 Queen's Yard, London E9 5EN",
   date: '2023-03-17',
@@ -280,7 +280,7 @@ event20 = Event.create(
   genre: "Latin"
 )
 
-event21 = Event.create(
+event20 = Event.create(
   name: "Tori Amos",
   address: "Kensington Gore, South Kensington, London SW7 2AP",
   date: '2023-04-03',
@@ -290,7 +290,7 @@ event21 = Event.create(
   genre: "Blues"
 )
 
-event22 = Event.create(
+event21 = Event.create(
   name: "Aldous Harding",
   address: "Silk St, Barbican, London EC2Y 8DS",
   date: '2023-04-28',
@@ -300,7 +300,7 @@ event22 = Event.create(
   genre: "Blues"
 )
 
-event23 = Event.create(
+event22 = Event.create(
   name: "Heatwave, Ammara, and JKriv",
   address: "261 Brixton Rd, London SW9 6LH",
   date: '2023-03-17',
@@ -310,7 +310,7 @@ event23 = Event.create(
   genre: "R&B"
 )
 
-event24 = Event.create(
+event23 = Event.create(
   name: "The Brand New Heavies",
   address: "1 Cabot Square, London E14 4QT",
   date: '2023-04-12',
@@ -320,7 +320,7 @@ event24 = Event.create(
   genre: "Jazz"
 )
 
-event25 = Event.create(
+event24 = Event.create(
   name: "Duran Duran",
   address: "Peninsula Square, London SE10 0DX",
   date: '2023-05-01',
@@ -330,7 +330,7 @@ event25 = Event.create(
   genre: "Pop"
 )
 
-event26 = Event.create(
+event25 = Event.create(
   name: "Jorge Drexler",
   address: "Silk St, Barbican, London EC2Y 8DS",
   date: '2023-05-01',
@@ -340,7 +340,7 @@ event26 = Event.create(
   genre: "Rock"
 )
 
-event27 = Event.create(
+event26 = Event.create(
   name: "Avril Lavigne",
   address: "Sackville Travel Services Ltd, 211 Stockwell Rd, London SW9 9SL",
   date: '2023-05-07',
@@ -350,7 +350,7 @@ event27 = Event.create(
   genre: "Rock"
 )
 
-event28 = Event.create(
+event27 = Event.create(
   name: "Joaquin Sabina",
   address: "Kensington Gore, South Kensington, London SW7 2AP",
   date: '2023-05-19',
@@ -360,7 +360,7 @@ event28 = Event.create(
   genre: "Pop"
 )
 
-event29 = Event.create(
+event28 = Event.create(
   name: "Wide Awake Festival 2023",
   address: "Brockwell Park, Brockwell Park Gardens, London SE24 0NG",
   date: '2023-05-27',
@@ -370,7 +370,7 @@ event29 = Event.create(
   genre: "Blues"
 )
 
-event30 = Event.create(
+event29 = Event.create(
   name: "Morrissey",
   address: "45 Queen Caroline St, London W6 9QH",
   date: '2023-03-19',
@@ -529,10 +529,10 @@ Chatroom.create(
   event: event29
 )
 
-Chatroom.create(
-  name: "Morrissey",
-  event: event30
-)
+# Chatroom.create(
+#   name: "Morrissey",
+#   event: event30
+# )
 
 puts "Created #{Chatroom.count} chatrooms"
 
