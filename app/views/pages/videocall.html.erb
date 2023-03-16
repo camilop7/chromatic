@@ -1,0 +1,30 @@
+  <!--  CHATROOM-->
+  <div class="chatroom-container">
+    <%= link_to event_chatroom_path(@chatroom.id), class: "no-decoration text-white" do %>
+      <i class="fa-solid fa-angle-left no-decoration fa-xl people", style:"color: black"></i>
+    <% end %>
+
+
+    <button class="stream-button" id="join-btn">Join Stream</button>
+
+    <div class="chatroom-card">
+
+
+      <div id="stream-wrapper">
+
+        <div id="video-streams"></div>
+
+        <div class="card-controlers">
+
+           <div id="stream-controls">
+              <button class="stream-controller-button" id="leave-btn">Leave Stream</button>
+              <button  class="stream-controller-button" id="mic-btn">Mic On</button>
+              <button  class="stream-controller-button" id="camera-btn">Camera on</button>
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- CHATROOM -->
