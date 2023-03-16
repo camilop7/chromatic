@@ -12,9 +12,7 @@
           class: "form-control",
           placeholder: "Location"
           %>
-
-          <input type="date" class="date" name="date" id="date">
-
+          <%= date_field_tag :date, class: 'date' %>
           <%= submit_tag "Start", class: "btn btn-flat btn-centre" %>
         <% end %>
     </div>
