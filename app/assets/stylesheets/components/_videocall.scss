@@ -1,0 +1,104 @@
+
+.chatroom-container{
+  background-color: white;
+  height: 100vh;
+}
+.chatroom-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#join-btn{
+  position: fixed;
+  top: 50vh;
+  left: 23.5vh;
+  right: 9vh;
+  margin-top:-50px;
+  margin-left:-100px;
+  font-size:18px;
+}
+
+#video-streams{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  height: 90vh;
+  width: 1400px;
+  margin:0 auto;
+}
+
+.video-container{
+  max-height: 100%;
+  background-color: white;
+}
+
+
+.video-player{
+  height: 100%;
+  width: 100%;
+}
+
+.stream-button{
+  width: 200px;
+  height: 56px;
+  background: #B41BD0;
+  border-style: solid;
+  border-radius: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.stream-controller-button{
+  width: 200px;
+  height: 56px;
+  background: black;
+  border-style: solid;
+  border-radius: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+
+// width: 200px;
+// height: 56px;
+// left: 97px;
+// top: 1181px;
+// background: #B41BD0;
+// border-style: solid;
+// border-color: white;
+// border-radius: 90px;
+// font-family: 'Ubuntu', sans-serif;
+// font-size: 16px;
+// color: white;
+// font-weight: bold;
+
+#stream-controls{
+  display: none;
+  // justify-content: center;
+  // margin-top:0.5em;
+  // margin-bottom: 5vh;
+}
+
+@media screen and (max-width:1400px){
+  #video-streams{
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      width: 95%;
+  }
+}
+
+#stream-wrapper{
+  width: 100%;
+}
+
+.card-controlers{
+  position: absolute;
+  top: 86vh;
+  left: 1vh;
+  right: 2vh;
+
+
+}

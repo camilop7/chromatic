@@ -58,7 +58,7 @@
           <%= cl_image_tag friendship.other_user(current_user).photo.key, class: 'avatar-friend-profile', crop: :fill %>
           <p class="friend-name"><%= friendship.other_user(current_user).name %></p>
           <%= link_to friendship_path(friendship), data: { turbo_method: :delete } do %>
-          <i class="fa-solid fa-user-minus"></i>
+            <i class="fa-solid fa-user-minus"></i>
           <% end %>
         <% end %>
         </div>

@@ -6,6 +6,10 @@
   <% end %>
   <p class="chatroom-title"><strong><%= @chatroom.name %></strong></p>
 
+  <%= link_to  videocall_path do %>
+    <i class="fa-solid fa-video"></i>
+  <% end %>
+
   <!-- Button trigger modal -->
   <i class="fa-solid fa-people-group fa-xl" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
 </div>
