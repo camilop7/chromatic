@@ -1,9 +1,10 @@
   <!--  CHATROOM-->
   <div class="chatroom-container">
-
-    <%= link_to events_path,class: "text-black" do %>
-    <p>Button</p>
+  <div id="video-button-back">
+    <%= link_to events_path do %>
+      <i class="fa-solid fa-chevron-left"></i>
     <% end %>
+  </div>
     <button class="stream-button" id="join-btn">Join Stream</button>
 
     <div class="chatroom-card">
