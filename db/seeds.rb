@@ -569,22 +569,22 @@ puts 'creating new user events....'
 
 
 UserEvent.create(
-  user_id: User.find(1).id,
+  user_id: 1,
   event_id: event4.id
 )
 
 UserEvent.create(
-  user_id: User.find(2).id,
+  user_id: 2,
   event_id: event5.id
 )
 
 UserEvent.create(
-  user_id: User.find(3).id,
+  user_id: 3,
   event_id: event3.id
 )
 
 UserEvent.create(
-  user_id: User.find(4).id,
+  user_id: 4,
   event_id: event3.id
 )
 
