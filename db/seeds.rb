@@ -36,7 +36,7 @@ owners = [
 owners.each do |owner|
   photo_url = URI.open(owner[:photo])
   name = owner[:name]
-  new_user = User.new(
+  new_user = User.create!(
     email: name + '@gmail.com',
     name: name,
     password: '123456',
@@ -566,14 +566,16 @@ puts "Created #{Chatroom.count} chatrooms"
 
 puts 'creating new user events....'
 
-UserEvent.create(
-  user_id: User.find(2).id,
-  event_id: event5.id
-)
+
 
 UserEvent.create(
   user_id: User.find(1).id,
   event_id: event4.id
+)
+
+UserEvent.create(
+  user_id: User.find(2).id,
+  event_id: event5.id
 )
 
 UserEvent.create(
