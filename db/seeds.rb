@@ -133,7 +133,7 @@ event5 = Event.create(
 event6 = Event.create(
   name: "Elton John",
   address: "The O2, London, UK SE10 0DX",
-  date: '2023-04-02',
+  date: '2023-03-18',
   artist: "Elton John",
   photo_url: "https://images.sk-static.com/images/media/profile_images/artists/371163/huge_avatar",
   description: "Sunday April 02, 2023 Elton John  The O2, London Tuesday April 04, 2023 Elton John The O2, London  Saturday April 08, 2023  Elton John  The O2, London  Sunday April 09, 2023  Elton John  The O2, London  Wednesday April 12, 2023  Elton John  The O2, London  Thursday April 13, 2023  Elton John  The O2, London  Sunday April 16, 2023  Elton John  The O2, London  Monday April 17, 2023  Elton John  The O2, London  Tuesday May 30, 2023  Elton John  The O2, London For fans of: Rock and Pop.",
@@ -191,7 +191,7 @@ event10 = Event.create(
 )
 
 event11 = Event.create(
-  name: "Snoop Dogg and Warren G",
+  name: "Snoop Dogg ",
   address: "The O2, London, UK SE10 0DX",
   date: '2023-03-17',
   artist: "Snoop Dogg and Warren G",
