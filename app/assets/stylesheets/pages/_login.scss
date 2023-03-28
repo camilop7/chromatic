@@ -1,26 +1,23 @@
+.login-container-login {
+  margin: 20px;
+  background-color: black;
+  border-radius: 20px;
+  padding: 20px;
+}
 .login-title {
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   color: white;
   font-weight: 700;
   font-size: 24px;
-  padding: 20px 20px 0px 20px;
-  margin-bottom: -16px;
-  margin-top: 179px;
+  margin-top: 5rem;
 }
 
-.login-container-login {
-  margin: 10px;
-  margin-top: 70px;
-  background-color: black;
-  border-radius: 5%;
-  padding: 20px;
-}
 
 .login-container-signup{
-  margin: 10px;
+  margin: 20px;
   background-color: black;
-  border-radius: 5%;
+  border-radius: 20px;
   padding: 20px;
 }
 
@@ -30,9 +27,8 @@
   color: white;
   font-weight: 700;
   font-size: 24px;
-  padding: 20px 20px 0px 20px;
   margin-bottom: 3px;
-  margin-top: 106px;
+  margin-top: 5rem;
 }
 
 .login-container-forgot-password {
@@ -59,10 +55,6 @@
   padding-bottom: 8px;
 }
 
-.signup-forgot-links {
-  padding-left: 10px;
-  padding-top: 20px;
-}
 
 .forgotyourpassword-forgot-links {
   padding-left: 10px;
@@ -72,4 +64,12 @@
 .login-button {
   padding-left: 10px;
   padding-top: 20px;
+}
+
+@media (min-width: 450px) {
+
+  .login-container-login, .login-container-signup, .login-title, .login-title-signup {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 }

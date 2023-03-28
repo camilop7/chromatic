@@ -1,8 +1,14 @@
 // Specific CSS for your home-page
 .home-top-container {
   width: 100%;
-  padding: 50px 0;
+  display: flex;
+  justify-content: center;
   font-family: 'Ubuntu', sans-serif;
+}
+
+.card-home-text {
+  padding-bottom: 20px;
+  margin-top: 7rem;
 }
 
 .card-home-text-h1 {
@@ -23,13 +29,6 @@
 }
 
 
-.card-home-text {
-  top: 0vh;
-  left: 5vh;
-  margin-top: 194px;
-  padding-bottom: 42px;
-  margin-right: 8px;
-}
 
 .card-home-text h2 {
   padding-bottom: 2vh;
@@ -41,10 +40,12 @@
   border-radius: 70px;
   background: #000000;
   transition: background 0.3s ease;
-  justify-content: center;
   display: flex;
-  margin: 80px;
-  margin-bottom: auto;
-  margin-left: 26%;
-  margin-top: -48px;
+  justify-content: center;
+}
+
+.lets-go-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
